@@ -39,7 +39,6 @@
 
         $stmt->bind_param("sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss",$id,$title,$first_name,$last_name,$preferred_name,$email,$street_address,$address_2,$city,$region,$postal,$country,$citizenship,$dob,$home_phone,$mobile_phone,$inter_phone,$employer,$job_title,$division,$work_street_address,$work_address_2,$work_city,$work_state,$work_postal,$work_country,$work_home_phone,$work_mobile_phone,$work_email,$uni_1,$degree_1,$month_from_1,$year_from_1,$month_to_1,$year_to_1,$uni_2,$degree_2,$month_from_2,$year_from_2,$month_to_2,$year_to_2,$uni_3,$degree_3,$month_from_3,$year_from_3,$month_to_3,$year_to_3,$hear,$conference,$otherC,$experience,$why,$cv,$NPO,$special,$pay,$bill_first_name,$bill_last_name,$bill_email,$bill_street_address,$bill_address_2,$bill_city,$bill_state,$bill_postal,$bill_country);
 
-
         // Taking all values from the form data
         $id = "";
         // Page 1
