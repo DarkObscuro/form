@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CISO Registration</title>
+    <link rel="icon" href="image/favicon.ico" type="image/ico">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css?version=1">
+    <script src="js/phoneFields.js" type="text/javascript"></script>
+    <script src="js/checkFields1.js" type="text/javascript"></script>
+    <script src="js/checkFields2.js" type="text/javascript"></script>
+    <script src="js/checkFields3.js" type="text/javascript"></script>
+    <script src="js/checkForm1.js" type="text/javascript"></script>
+    <script src="js/checkForm2.js" type="text/javascript"></script>
+    <script src="js/checkForm3.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div class="header">
+        <h1>CISO Program</h1>
+    </div>
+
+    <div class="main-block">
+        <form action="php/insert.php" id="regForm" method="post">
+
+        <!--------------------------------------------------- Page 1 --------------------------------------------------->
+        <div class="tab">
+            <h2>Personal Contact</h2>
+            <hr>
+
+            <label id="icontitle" for="title"><i class="fas fa-user"></i></label>      
+            <select id="title" name="title" class="form-control" onchange='checkNotEmpty1();' required>
+                <option value="" selected disabled>Please select title...</option>
+                <option value="Mr.">Mr.</option>
+                <option value="Mrs.">Mrs.</option>
+                <option value="Ms.">Ms.</option>
+                <option value="Dr.">Dr.</option>
+            </select>
+
+            <div class="inline-input">
+                <div class="inline-input-block">
+                    <label id="iconfirstname" for="firstname"><i class="fas fa-user"></i></label>
+                    <input type="text" name="firstname" id="firstname" placeholder="First Name" onkeyup='checkNotEmpty1();' required/>
+                </div>
+                
+                <div class="inline-input-block">
+                    <label id="iconlastname" for="lastname"><i class="fas fa-user"></i></label>
+                    <input type="text" name="lastname" id="lastname" placeholder="Last Name" onkeyup='checkNotEmpty1();' required/>     
+                </div>
+            </div>
+
+            <label id="iconpreferredname" for="preferredname"><i class="fas fa-user"></i></label>
+            <input type="text" name="preferredname" id="preferredname" placeholder="Preferred Name" onkeyup='checkNotEmpty1();' required>
+            
+            <label id="iconemail" for="email"><i class="fas fa-envelope"></i></label>
+            <input type="email" name="email" id="email" placeholder="Preferred Email" onkeyup='checkNotEmpty1();' required/>
+            
+            <hr>
+            <h3>Home Address</h3>
+
+            <label id="iconstreetaddress" for="streetaddress"><i class="fas fa-globe"></i></label>
+            <input type="text" name="streetaddress" id="streetaddress" placeholder="Street Address" onkeyup='checkNotEmpty1();' required/>
+
+            <label id="iconaddress2" for="address2"><i class="fas fa-globe"></i></label>
+            <input type="text" name="address2" id="address2" placeholder="Address Line 2" onkeyup='checkNotEmpty1();' required/>
+
+            <div class="inline-input">
+                <div class="inline-input-block">
+                    <label id="iconcity" for="city"><i class="fas fa-globe"></i></label>
+                    <input type="text" name="city" id="city" placeholder="City" onkeyup='checkNotEmpty1();' required/>
+                </div>
+                
+                <div class="inline-input-block">
+                    <label id="iconregion" for="region"><i class="fas fa-globe"></i></label>
+                    <input type="text" name="region" id="region" placeholder="State / Province / Region" onkeyup='checkNotEmpty1();' required/>     
+                </div>
+            </div>
+
+            <div class="inline-input">
+                <div class="inline-input-block">
+                    <label id="iconpostal" for="postal"><i class="fas fa-globe"></i></label>
+                    <input type="text" name="postal" id="postal" placeholder="Postal / Zip Code" onkeyup='checkNotEmpty1();' required/>
+                </div>
+                
+                <div class="inline-input-block">
+                    <label id="iconcountry" for="country"><i class="fas fa-globe"></i></label>      
+                    <input type="text" name="country" id="country"  placeholder="Country" onkeyup='checkNotEmpty1();' required>
+                </div>
+            </div>
+
+            <hr>
+
+            <label id="iconcitizenship" for="citizenship"><i class="fas fa-globe"></i></label>      
+            <input type="text" name="citizenship" id="citizenship"  placeholder="Citizenship" onkeyup='checkNotEmpty1();' required>
+            
+            <label id="icondob" for="dob"><i class="fas fa-calendar"></i></label>
+            <input type="date" name="dob" id="dob" placeholder="Date of Birth (e.g. MM/DD/YYYY)" onkeyup='checkNotEmpty1();' required/>
+
+            <label id="iconhomephone" for="homephone"><i class="fas fa-phone"></i></label>
+            <input type="text" name="homephone" id="homephone" placeholder="Home Phone Number   (###) ###-####" onkeyup='checkNotEmpty1();' required/>
+
+            <label id="iconmobilephone" for="mobilephone"><i class="fas fa-phone"></i></label>
+            <input type="text" name="mobilephone" id="mobilephone" placeholder="Mobile Phone Number   (###) ###-####" onkeyup='checkNotEmpty1();' required/>
+
+            <label id="iconinterphone" for="interphone"><i class="fas fa-phone"></i></label>
+            <input type="text" name="interphone" id="interphone" placeholder="International Phone Number" onkeyup='checkNotEmpty1();' required/>
+
+        </div>
+
+        <!--------------------------------------------------- Page 2 --------------------------------------------------->
+        <div class="tab">
+            <h2>Work Contact Information</h2>
+            <hr>
+            <label id="iconemployer" for="employer"><i class="fas fa-user"></i></label>
+            <input type="text" name="employer" id="employer" placeholder="Employer" onkeyup='checkNotEmpty2();' required>
+
+            <label id="iconjobtitle" for="jobtitle"><i class="fas fa-user"></i></label>
+            <input type="text" name="jobtitle" id="jobtitle" placeholder="Job Title" onkeyup='checkNotEmpty2();' required>
+
+            <label id="icondivision" for="division"><i class="fas fa-user"></i></label>
+            <input type="text" name="division" id="division" placeholder="Division / Branch" onkeyup='checkNotEmpty2();' required>
+
+            <hr>
+            <h3>Work Address</h3>
+
+            <label id="iconworkstreetaddress" for="workstreetaddress"><i class="fas fa-globe"></i></label>
+            <input type="text" name="workstreetaddress" id="workstreetaddress" placeholder="Street Address" onkeyup='checkNotEmpty2();' required>
+
+            <label id="iconworkaddress2" for="workaddress2"><i class="fas fa-globe"></i></label>
+            <input type="text" name="workaddress2" id="workaddress2" placeholder="Address Line 2" onkeyup='checkNotEmpty2();' required>
+
+            <div class="inline-input">
+                <div class="inline-input-block">
+                    <label id="iconworkcity" for="workcity"><i class="fas fa-globe"></i></label>
+                    <input type="text" name="workcity" id="workcity" placeholder="City" onkeyup='checkNotEmpty2();' required/>
+                </div>
+                
+                <div class="inline-input-block">
+                    <label id="iconworkstate" for="workstate"><i class="fas fa-globe"></i></label>
+                    <input type="text" name="workstate" id="workstate" placeholder="State / Province / Region" onkeyup='checkNotEmpty2();' required/>     
+                </div>
+            </div>
+
+            <div class="inline-input">
+                <div class="inline-input-block">
+                    <label id="iconworkpostal" for="workpostal"><i class="fas fa-globe"></i></label>
+                    <input type="text" name="workpostal" id="workpostal" placeholder="Postal / Zip Code" onkeyup='checkNotEmpty2();' required/>
+                </div>
+                
+                <div class="inline-input-block">
+                    <label id="iconworkcountry" for="workcountry"><i class="fas fa-globe"></i></label>      
+                    <input type="text" name="workcountry" id="workcountry"  placeholder="Country" onkeyup='checkNotEmpty2();' required>
+                </div>
+            </div>
+            <hr>
+
+            <label id="iconworkhomephone" for="workhomephone"><i class="fas fa-phone"></i></label>
+            <input type="text" name="workhomephone" id="workhomephone" placeholder="Work Phone Number   (###) ###-####" onkeyup='checkNotEmpty2();' required/>
+
+            <label id="iconworkmobilephone" for="workmobilephone"><i class="fas fa-phone"></i></label>
+            <input type="text" name="workmobilephone" id="workmobilephone" placeholder="Work Mobile Number   (###) ###-####" onkeyup='checkNotEmpty2();' required/>
+
+            <label id="iconworkemail" for="workemail"><i class="fas fa-envelope"></i></label>
+            <input type="email" name="workemail" id="workemail" placeholder="Work Email" onkeyup='checkNotEmpty2();' required/>
+
+        </div>
+
+        <!--------------------------------------------------- Page 3 --------------------------------------------------->
+        <div class="tab">
+            <h2>Educational</h2>
+            <hr>
+
+            <h3>Formation 1</h3>
+            <label id="iconuni1" for="uni1"><i class="fas fa-user-graduate"></i></label>
+            <input type="text" name="uni1" id="uni1" placeholder="College/University" onkeyup='checkNotEmpty3();' required/>
+
+            <label id="icondegree1" for="degree1"><i class="fas fa-user-graduate"></i></label>
+            <input type="text" name="degree1" id="degree1" placeholder="Degree Received (Abbreviations OK)" onkeyup='checkNotEmpty3();' required/>
+
+            <div class="inline-input">
+                <div class="inline-input-block">
+                    <label id="iconmonthfrom1" for="monthfrom1"><i class="fas fa-calendar"></i></label>
+                    <input type="text" name="monthfrom1" id="monthfrom1" placeholder="Month From" onkeyup='checkNotEmpty3();' required/>
+                </div>
+                
+                <div class="inline-input-block">
+                    <label id="iconyearfrom1" for="yearfrom1"><i class="fas fa-calendar"></i></label>
+                    <input type="text" name="yearfrom1" id="yearfrom1" placeholder="Year From" onkeyup='checkNotEmpty3();' required/>     
+                </div>
+            </div>
+
+            <div class="inline-input">
+                <div class="inline-input-block">
+                    <label id="iconmonthto1" for="monthto1"><i class="fas fa-calendar"></i></label>
+                    <input type="text" name="monthto1" id="monthto1" placeholder="Month To" onkeyup='checkNotEmpty3();' required/>
+                </div>
+                
+                <div class="inline-input-block">
+                    <label id="iconyearto1" for="yearto1"><i class="fas fa-calendar"></i></label>
+                    <input type="text" name="yearto1" id="yearto1" placeholder="Year To" onkeyup='checkNotEmpty3();' required/>     
+                </div>
+            </div>
+            <hr>
+
+            <h3>Formation 2</h3>
+            <label id="iconuni2" for="uni2"><i class="fas fa-user-graduate"></i></label>
+            <input type="text" name="uni2" id="uni2" placeholder="College/University" onkeyup='checkNotEmpty3();' required/>
+
+            <label id="icondegree2" for="degree2"><i class="fas fa-user-graduate"></i></label>
+            <input type="text" name="degree2" id="degree2" placeholder="Degree Received (Abbreviations OK)" onkeyup='checkNotEmpty3();' required/>
+
+            <div class="inline-input">
+                <div class="inline-input-block">
+                    <label id="iconmonthfrom2" for="monthfrom2"><i class="fas fa-calendar"></i></label>
+                    <input type="text" name="monthfrom2" id="monthfrom2" placeholder="Month From" onkeyup='checkNotEmpty3();' required/>
+                </div>
+                
+                <div class="inline-input-block">
+                    <label id="iconyearfrom2" for="yearfrom2"><i class="fas fa-calendar"></i></label>
+                    <input type="text" name="yearfrom2" id="yearfrom2" placeholder="Year From" onkeyup='checkNotEmpty3();' required/>     
+                </div>
+            </div>
+
+            <div class="inline-input">
+                <div class="inline-input-block">
+                    <label id="iconmonthto2" for="monthto2"><i class="fas fa-calendar"></i></label>
+                    <input type="text" name="monthto2" id="monthto2" placeholder="Month To" onkeyup='checkNotEmpty3();' required/>
+                </div>
+                
+                <div class="inline-input-block">
+                    <label id="iconyearto2" for="yearto2"><i class="fas fa-calendar"></i></label>
+                    <input type="text" name="yearto2" id="yearto2" placeholder="Year To" onkeyup='checkNotEmpty3();' required/>     
+                </div>
+            </div>
+            <hr>
+
+            <h3>Formation 3</h3>
+            <label id="iconuni3" for="uni3"><i class="fas fa-user-graduate"></i></label>
+            <input type="text" name="uni3" id="uni3" placeholder="College/University" onkeyup='checkNotEmpty3();' required/>
+
+            <label id="icondegree3" for="degree3"><i class="fas fa-user-graduate"></i></label>
+            <input type="text" name="degree3" id="degree3" placeholder="Degree Received (Abbreviations OK)" onkeyup='checkNotEmpty3();' required/>
+
+            <div class="inline-input">
+                <div class="inline-input-block">
+                    <label id="iconmonthfrom3" for="monthfrom3"><i class="fas fa-calendar"></i></label>
+                    <input type="text" name="monthfrom3" id="monthfrom3" placeholder="Month From" onkeyup='checkNotEmpty3();' required/>
+                </div>
+                
+                <div class="inline-input-block">
+                    <label id="iconyearfrom3" for="yearfrom3"><i class="fas fa-calendar"></i></label>
+                    <input type="text" name="yearfrom3" id="yearfrom3" placeholder="Year From" onkeyup='checkNotEmpty3();' required/>     
+                </div>
+            </div>
+
+            <div class="inline-input">
+                <div class="inline-input-block">
+                    <label id="iconmonthto3" for="monthto3"><i class="fas fa-calendar"></i></label>
+                    <input type="text" name="monthto3" id="monthto3" placeholder="Month To" onkeyup='checkNotEmpty3();' required/>
+                </div>
+                
+                <div class="inline-input-block">
+                    <label id="iconyearto3" for="yearto3"><i class="fas fa-calendar"></i></label>
+                    <input type="text" name="yearto3" id="yearto3" placeholder="Year To" onkeyup='checkNotEmpty3();' required/>     
+                </div>
+            </div>
+        </div>
+
+        <!--------------------------------------------------- Page 4 --------------------------------------------------->
+        <div class="tab">
+            <h2>Questionnaire</h2>
+            <hr>
+            <h3>How did you hear about this certificate program?</h3>
+            <div class="inline-input">
+                <div class="inline-input-block">
+                    <label id="iconhear" for="hear"><i class="fas fa-font"></i></label>      
+                    <select id="hear" name="hear" class="form-control" onchange='checkNotEmpty4();' required>
+                        <option value="" selected disabled>Please select...</option>
+                        <option value="colleague">Colleague</option>
+                        <option value="conf">Conference</option>
+                        <option value="govpublic">Government Publication</option>
+                        <option value="newsmedia">News Media</option>
+                        <option value="other">Other</option>
+                        <option value="website">Website</option>
+                    </select>     
+                </div>
+
+                <div class="inline-input-block">
+                    <label id="iconconference" for="conference"><i class="fas fa-font"></i></label>
+                    <input type="text" name="conference" id="conference" placeholder="(Please specify the conference)" onkeyup='checkNotEmpty4();' required/>
+                </div>
+            </div>
+            <br>
+
+            <h3>Other</h3>
+            <label id="iconotherC" for="otherC"><i class="fas fa-font"></i></label>
+            <input type="text" name="otherC" id="otherC" onkeyup='checkNotEmpty4();' required/>
+            <br><br>
+
+            <h3>Please describe your work responsabilities and professional experience.</h3>
+            <label id="iconexperience" for="experience"><i class="fas fa-font"></i></label>
+            <input type="text" name="experience" id="conference" onkeyup='checkNotEmpty4();' required/>
+            <br><br>
+
+            <h3>Please indicate why you wish to attend this certificate program and how you feel this program will be beneficial to you.</h3>
+            <label id="iconwhy" for="why"><i class="fas fa-font"></i></label>
+            <input type="text" name="why" id="why" onkeyup='checkNotEmpty4();' required/>
+            <br><br>
+
+            <h3>Please upload your Resume/CV</h3>
+            <label id="iconcv" for="cv"><i class="fas fa-file"></i></label>
+            <input type="file" name="cv" id="cv" onkeyup='checkNotEmpty4();' required/>
+            <br><br>
+
+            <h3>Are you an employee of a non-profit organizaion?</h3>
+            <input type="radio" value="yes" id="yesNPO" name="NPO" onkeyup='checkNotEmpty4();' required/>
+            <label for="yesNPO" class="radio">Yes</label>
+            <input type="radio" value="no" id="noNPO" name="NPO" checkedonkeyup='checkNotEmpty4();' required/>
+            <label for="noNPO" class="radio">No</label>
+            <br><br>
+
+            <h3>Do you have any special dietary or physical considerations of which we should be aware?.</h3>
+            <label id="iconspecial" for="special"><i class="fas fa-font"></i></label>
+            <input type="text" name="special" id="special" onkeyup='checkNotEmpty4();' required/>
+        </div>
+
+        <!--------------------------------------------------- Page 5 --------------------------------------------------->
+        <div class="tab">
+            <h2>Billing Information</h2>
+            <hr>
+
+            <h3>Will you be paying by check or credit</h3>
+            <input type="radio" value="credit" id="credit" name="pay" checkedonkeyup='y();' required/>
+            <label for="credit" class="radio">I will be paying online with a credit card</label>
+            <input type="radio" value="check" id="check" name="pay" onkeyup='checkNotEmpty5();' required/>
+            <label for="check" class="radio">I will be paying by check or EFT</label>
+            <br><br>
+
+            <h3>Billing Contact Name</h3>
+            <div class="inline-input">
+                <div class="inline-input-block">
+                    <label id="iconbillfirstname" for="billfirstname"><i class="fas fa-user"></i></label>
+                    <input type="text" name="billfirstname" id="billfirstname" placeholder="First" onkeyup='checkNotEmpty5();' required/>
+                </div>
+                
+                <div class="inline-input-block">
+                    <label id="iconbilllastname" for="billlastname"><i class="fas fa-user"></i></label>
+                    <input type="text" name="billlastname" id="billlastname" placeholder="Last" onkeyup='checkNotEmpty5();' required/>     
+                </div>
+            </div>
+
+            <label id="iconbillemail" for="billemail"><i class="fas fa-user"></i></label>
+            <input type="email" name="billemail" id="billemail" placeholder="Billing Contact Email" onkeyup='checkNotEmpty5();' required/>
+
+            <hr>
+            <h3>Billing Address</h3>
+
+            <label id="iconbillstreetaddress" for="billstreetaddress"><i class="fas fa-globe"></i></label>
+            <input type="text" name="billstreetaddress" id="billstreetaddress" placeholder="Street Address" onkeyup='checkNotEmpty5();' required/>
+
+            <label id="iconbilladdress2" for="billaddress2"><i class="fas fa-globe"></i></label>
+            <input type="text" name="billaddress2" id="billaddress2" placeholder="Address Line 2" onkeyup='checkNotEmpty5();' required/>
+
+            <div class="inline-input">
+                <div class="inline-input-block">
+                    <label id="iconbillcity" for="billcity"><i class="fas fa-globe"></i></label>
+                    <input type="text" name="billcity" id="billcity" placeholder="City" onkeyup='checkNotEmpty5();' required/>
+                </div>
+                
+                <div class="inline-input-block">
+                    <label id="iconbillstate" for="billstate"><i class="fas fa-globe"></i></label>
+                    <input type="text" name="billstate" id="billstate" placeholder="State / Province / Region" onkeyup='checkNotEmpty5();' required/>     
+                </div>
+            </div>
+
+            <div class="inline-input">
+                <div class="inline-input-block">
+                    <label id="iconbillpostal" for="billpostal"><i class="fas fa-globe"></i></label>
+                    <input type="text" name="billpostal" id="billpostal" placeholder="Postal / Zip Code" onkeyup='checkNotEmpty5();' required/>
+                </div>
+                
+                <div class="inline-input-block">
+                    <label id="iconbillcountry" for="billcountry"><i class="fas fa-globe"></i></label>      
+                    <input type="text" name="billcountry" id="billcountry"  placeholder="Country" onkeyup='checkNotEmpty5();' required>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+        <!--------------------------------------------------- Bottom buttons --------------------------------------------------->
+        <div class="inline-input">
+            <div class="inline-input-block">
+                <button type="button" id="prevBtn" onclick="nextPrev(-1);">Previous</button>
+            </div>
+            <div>
+                <button type="button" id="nextBtn" onclick="nextPrev(1);">Next</button>
+            </div>
+        </div>
+        
+        <!----------------------------------- Circles which indicates the steps of the form ----------------------------------->
+        <div style="text-align:center;margin-top:40px;">
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+        </div>
+
+        </form>
+
+    </div>
+    
+    <!------------------------------------------------------- Javascript ------------------------------------------------------->
+    <script>
+        var currentTab = 0; // Current tab is set to be the first tab (0)
+        showTab(currentTab); // Display the current tab
+
+        var checkFormFilled = function(n) {
+            if (n == 0) {
+                return checkFormFields1(n);
+            } else if (n == 1) {
+                return checkFormFields2(n);
+            } else if (n == 2) {
+                return checkFormFields3(n);
+            } else {
+                return true;
+            }
+        }
+
+        function showTab(n) {
+            // This function will display the specified tab of the form ...
+            var x = document.getElementsByClassName("tab");
+            x[n].style.display = "block";
+            // ... and fix the Previous/Next buttons:
+            if (n == 0) {
+                document.getElementById("prevBtn").style.display = "none";
+            } else {
+                document.getElementById("prevBtn").style.display = "inline";
+            }
+            if (n == (x.length - 1)) {
+                document.getElementById("nextBtn").innerHTML = "Submit";
+            } else {
+                document.getElementById("nextBtn").innerHTML = "Next";
+            }
+            // ... and run a function that displays the correct step indicator:
+            fixStepIndicator(n);
+        }
+
+        function nextPrev(n) {
+            // This function will figure out which tab to display
+            var x = document.getElementsByClassName("tab");
+            // Exit the function is any field in the current tab is invalid
+            if (n==1 && !validateForm()) return false;
+            // Hide the current tab:
+            x[currentTab].style.display = "none";
+            // Increase or decrease the current tab by 1:
+            currentTab = currentTab + n;
+            // if you have reached the end of the form... :
+            if (currentTab >= x.length) {
+                //...the form gets submitted:
+                document.getElementById("regForm").submit();
+                return false;
+            }
+            // Otherwise, display the correct tab:
+            showTab(currentTab);
+        }
+
+        
+        function validateForm() {
+            // This function deals with validation of the form fields
+            // If the valid status is true, mark the step as finished and valid:
+            if (checkFormFilled(currentTab)) {
+                document.getElementsByClassName("step")[currentTab].className += " finish";
+            }
+            return checkFormFilled(currentTab); // return the valid status
+        }
+        
+
+        function fixStepIndicator(n) {
+            // This function removes the "active" class of all steps...
+            var i, x = document.getElementsByClassName("step");
+            for (i = 0; i < x.length; i++) {
+                x[i].className = x[i].className.replace(" active", "");
+            }
+            //... and adds the "active" class to the current step:
+            x[n].className += " active";
+        }
+    </script>
+
+  </body>
+</html>

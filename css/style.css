@@ -1,0 +1,286 @@
+@font-face {
+    font-family: Bukra;
+    src: url(../font/29LTBukra-Rg.woff);
+}
+
+html, body {
+    /*display: block;*/
+    justify-content: center;
+    height: 100%;
+}
+
+body, div, h1, form, input, p, select { 
+    padding: 0;
+    margin: 0;
+    outline: none;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 16px;
+    font-family: Bukra;
+}
+
+h1 {
+    padding: 10px 0;
+    font-size: 52px;
+    font-weight: 300;
+    text-align: center;
+    color: blue;
+    background: -webkit-linear-gradient(45deg,blue, red);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+
+h2 {
+    padding: 10px 0;
+    margin: 0;
+    font-size: 32px;
+    font-weight: 300;
+    text-align: center;
+    color: rgb(36,42,117)
+}
+
+h3 {
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: left;
+    color: rgb(36,42,117)
+}
+
+p {
+    font-size: 12px;
+}
+
+hr {
+    color: #a9a9a9;
+    opacity: 0.3;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+}
+
+.big-grid {
+    max-width: 70%; 
+    min-height: 70%; 
+    padding: 10px 30px;
+    margin: 2% 20% 10% 20%;
+    border-radius: 5px; 
+    border: solid 1px #ccc;
+    box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+    background: #ebebeb; 
+    display: grid;
+}
+
+.imageL {
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10%;
+}
+
+.imageR {
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10%;
+}
+
+.main-block {
+    max-width: 70%; 
+    min-height: 70%; 
+    padding: 10px 30px;
+    margin: 2% 20% 10% 20%;
+    border-radius: 5px; 
+    border: solid 1px #ccc;
+    box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+    background: #ebebeb; 
+}
+.full-line-input {
+    display: block;
+}
+
+.inline-input {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.inline-input-block {
+    width: 100%;
+}
+
+form {
+    margin: 0 30px;
+}
+
+.account-type, .gender {
+    margin: 15px 0;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+label#icontitle, label#iconfirstname, label#iconlastname, label#iconpreferredname, label#iconemail, label#iconstreetaddress, label#iconaddress2, label#iconcity, label#iconregion, label#iconpostal, label#iconcountry, label#iconcitizenship, label#icondob, label#iconhomephone, label#iconmobilephone, label#iconinterphone, label#iconemployer, label#iconjobtitle, label#icondivision, label#iconworkstreetaddress, label#iconworkaddress2, label#iconworkcity, label#iconworkstate, label#iconworkpostal, label#iconworkcountry, label#iconworkhomephone, label#iconworkmobilephone, label#iconworkemail, label#iconuni1, label#icondegree1, label#iconmonthfrom1, label#iconyearfrom1, label#iconmonthto1, label#iconyearto1, label#iconuni2, label#icondegree2, label#iconmonthfrom2, label#iconyearfrom2, label#iconmonthto2, label#iconyearto2, label#iconuni3, label#icondegree3, label#iconmonthfrom3, label#iconyearfrom3, label#iconmonthto3, label#iconyearto3, label#iconhear, label#iconconference, label#iconotherC, label#iconexperience, label#iconwhy, label#iconcv, label#iconNPO, label#iconspecial, label#iconpay, label#iconbillfirstname, label#iconbilllastname, label#iconbillemail, label#iconbillstreetaddress, label#iconbilladdress2, label#iconbillcity, label#iconbillstate, label#iconbillpostal, label#iconbillcountry {
+    margin: 0;
+    border-radius: 5px 0 0 5px;
+}
+
+label.radio {
+    position: relative;
+    display: inline-block;
+    padding-top: 4px;
+    margin-right: 20px;
+    text-indent: 30px;
+    overflow: visible;
+    cursor: pointer;
+}
+
+label.radio:before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgb(36,42,117);
+}
+
+label.radio:after {
+    content: "";
+    position: absolute;
+    width: 9px;
+    height: 4px;
+    top: 8px;
+    left: 4px;
+    border: 3px solid #fff;
+    border-top: none;
+    border-right: none;
+    transform: rotate(-45deg);
+    opacity: 0;
+}
+
+input[type=radio]:checked + label:after {
+    opacity: 1;
+}
+
+input[type=text], input[type=password], input[type=email], input[type=tel], input[type="date"] {
+    width: calc(100% - 57px);
+    height: 36px;
+    margin: 13px 0 0 -5px;
+    padding-left: 10px; 
+    border-radius: 0 5px 5px 0;
+    border: solid 1px #cbc9c9; 
+    box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
+    background: #fff; 
+}
+
+input[type=file] {
+    width: calc(100% - 57px);
+    height: 36px;
+    margin: 13px 0 0 -5px;
+    padding-left: 10px; 
+    border-radius: 0 5px 5px 0;
+    border: solid 1px #cbc9c9; 
+    box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
+    background: #fff; 
+    transform: translate(1px, -5px);
+}
+
+
+select {
+    width: calc(100% - 45px);
+    font-family: Bukra;
+    height: 38px;
+    margin: 13px 0 0 -5px;
+    padding-left: 6px; 
+    border-radius: 0 5px 5px 0;
+    border: solid 1px #cbc9c9; 
+    box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
+    background: #fff;
+    color: rgb(117,117,117);
+}
+
+input:hover, input:valid, select:hover, select:valid {
+    border: 1px solid transparent;
+    box-shadow: 0 0 3px 0 blue;
+}
+
+input:valid, select:valid {
+    color: blue;
+}
+
+#icontitle, #iconpreferredname, #iconaddress2, #iconhomephone, #iconinterphone, #iconworkaddress2, #iconworkhomephone, #iconuni2, #icondegree2, #iconmonthfrom2, #iconyearfrom2, #iconmonthto2, #iconyearto2, #iconuni3, #icondegree3, #iconmonthfrom3, #iconyearfrom3, #iconmonthto3, #iconyearto3, #iconhear, #iconconference, #iconotherC, #iconexperience, #iconwhy, #iconcv, #iconNPO, #iconspecial, #iconpay, #iconbillfirstname, #iconbilllastname, #iconbillemail, #iconbillstreetaddress, #iconbilladdress2, #iconbillcity, #iconbillstate, #iconbillpostal, #iconbillcountry {
+    display: inline-block;
+    padding: 9.3px 15px;
+    box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
+    background: blue;
+    color: #fff;
+    text-align: center;
+}
+
+#iconfirstname, #iconlastname, #iconemail, #iconstreetaddress, #iconcity, #iconregion, #iconpostal, #iconcountry, #iconcitizenship, #icondob, #iconmobilephone, #iconemployer, #iconjobtitle, #icondivision, #iconworkstreetaddress, #iconworkcity, #iconworkstate, #iconworkpostal, #iconworkcountry, #iconworkmobilephone, #iconworkemail, #iconuni1, #icondegree1, #iconmonthfrom1, #iconyearfrom1, #iconmonthto1, #iconyearto1 {
+    display: inline-block;
+    padding: 9.3px 15px;
+    box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
+    background: red;
+    color: #fff;
+    text-align: center;
+}
+
+.btn-block {
+    margin-top: 10px;
+    text-align: center;
+}
+
+button {
+    width: 100%;
+    padding: 10px 0;
+    margin: 10px auto;
+    border-radius: 5px; 
+    border: none;
+    background: rgb(36,42,117); 
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+}
+
+button:hover {
+    background: rgb(48,157,181);
+    cursor: pointer;
+}
+
+span {
+    color: red;
+}
+
+/* Hide all steps by default: */
+.tab {
+    display: none;
+}
+  
+/* Make circles that indicate the steps of the form: */
+.step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+}
+  
+/* Mark the active step: */
+.step.active {
+    opacity: 1;
+}
+  
+/* Mark the steps that are finished and valid: */
+.step.finish {
+    background-color: #04AA6D;
+}
