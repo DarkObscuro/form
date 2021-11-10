@@ -7,12 +7,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css?version=1">
     <script src="js/phoneFields.js" type="text/javascript"></script>
-    <script src="js/checkFields1.js" type="text/javascript"></script>
-    <script src="js/checkFields2.js" type="text/javascript"></script>
-    <script src="js/checkFields3.js" type="text/javascript"></script>
-    <script src="js/checkForm1.js" type="text/javascript"></script>
-    <script src="js/checkForm2.js" type="text/javascript"></script>
-    <script src="js/checkForm3.js" type="text/javascript"></script>
+    <script src="js/checkField.js" type="text/javascript"></script>
+    <script src="js/checkForm.js" type="text/javascript"></script>
   </head>
 
   <body>
@@ -29,7 +25,7 @@
             <hr>
 
             <label id="icontitle" for="title"><i class="fas fa-user"></i></label>      
-            <select id="title" name="title" class="form-control" onchange='checkNotEmpty1();' required>
+            <select id="title" name="title" class="form-control" onchange='checkNotEmptyBlue(this.id);' required>
                 <option value="" selected disabled>Please select title...</option>
                 <option value="Mr.">Mr.</option>
                 <option value="Mrs.">Mrs.</option>
@@ -40,70 +36,70 @@
             <div class="inline-input">
                 <div class="inline-input-block">
                     <label id="iconfirstname" for="firstname"><i class="fas fa-user"></i></label>
-                    <input type="text" name="firstname" id="firstname" placeholder="First Name" onkeyup='checkNotEmpty1();' required/>
+                    <input type="text" name="firstname" id="firstname" placeholder="First Name" onkeyup='checkNotEmptyRed(this.id);' required/>
                 </div>
                 
                 <div class="inline-input-block">
                     <label id="iconlastname" for="lastname"><i class="fas fa-user"></i></label>
-                    <input type="text" name="lastname" id="lastname" placeholder="Last Name" onkeyup='checkNotEmpty1();' required/>     
+                    <input type="text" name="lastname" id="lastname" placeholder="Last Name" onkeyup='checkNotEmptyRed(this.id);' required/>     
                 </div>
             </div>
 
             <label id="iconpreferredname" for="preferredname"><i class="fas fa-user"></i></label>
-            <input type="text" name="preferredname" id="preferredname" placeholder="Preferred Name" onkeyup='checkNotEmpty1();' required>
+            <input type="text" name="preferredname" id="preferredname" placeholder="Preferred Name" onkeyup='checkNotEmptyBlue(this.id);' required>
             
             <label id="iconemail" for="email"><i class="fas fa-envelope"></i></label>
-            <input type="email" name="email" id="email" placeholder="Preferred Email" onkeyup='checkNotEmpty1();' required/>
+            <input type="email" name="email" id="email" placeholder="Preferred Email" onkeyup='checkNotEmptyRed(this.id);' required/>
             
             <hr>
             <h3>Home Address</h3>
 
             <label id="iconstreetaddress" for="streetaddress"><i class="fas fa-globe"></i></label>
-            <input type="text" name="streetaddress" id="streetaddress" placeholder="Street Address" onkeyup='checkNotEmpty1();' required/>
+            <input type="text" name="streetaddress" id="streetaddress" placeholder="Street Address" onkeyup='checkNotEmptyRed(this.id);' required/>
 
             <label id="iconaddress2" for="address2"><i class="fas fa-globe"></i></label>
-            <input type="text" name="address2" id="address2" placeholder="Address Line 2" onkeyup='checkNotEmpty1();' required/>
+            <input type="text" name="address2" id="address2" placeholder="Address Line 2" onkeyup='checkNotEmptyBlue(this.id);' required/>
 
             <div class="inline-input">
                 <div class="inline-input-block">
                     <label id="iconcity" for="city"><i class="fas fa-globe"></i></label>
-                    <input type="text" name="city" id="city" placeholder="City" onkeyup='checkNotEmpty1();' required/>
+                    <input type="text" name="city" id="city" placeholder="City" onkeyup='checkNotEmptyRed(this.id);' required/>
                 </div>
                 
                 <div class="inline-input-block">
                     <label id="iconregion" for="region"><i class="fas fa-globe"></i></label>
-                    <input type="text" name="region" id="region" placeholder="State / Province / Region" onkeyup='checkNotEmpty1();' required/>     
+                    <input type="text" name="region" id="region" placeholder="State / Province / Region" onkeyup='checkNotEmptyRed(this.id);' required/>     
                 </div>
             </div>
 
             <div class="inline-input">
                 <div class="inline-input-block">
                     <label id="iconpostal" for="postal"><i class="fas fa-globe"></i></label>
-                    <input type="text" name="postal" id="postal" placeholder="Postal / Zip Code" onkeyup='checkNotEmpty1();' required/>
+                    <input type="text" name="postal" id="postal" placeholder="Postal / Zip Code" onkeyup='checkNotEmptyRed(this.id);' required/>
                 </div>
                 
                 <div class="inline-input-block">
                     <label id="iconcountry" for="country"><i class="fas fa-globe"></i></label>      
-                    <input type="text" name="country" id="country"  placeholder="Country" onkeyup='checkNotEmpty1();' required>
+                    <input type="text" name="country" id="country"  placeholder="Country" onkeyup='checkNotEmptyRed(this.id);' required>
                 </div>
             </div>
 
             <hr>
 
             <label id="iconcitizenship" for="citizenship"><i class="fas fa-globe"></i></label>      
-            <input type="text" name="citizenship" id="citizenship"  placeholder="Citizenship" onkeyup='checkNotEmpty1();' required>
+            <input type="text" name="citizenship" id="citizenship"  placeholder="Citizenship" onkeyup='checkNotEmptyRed(this.id);' required>
             
             <label id="icondob" for="dob"><i class="fas fa-calendar"></i></label>
-            <input type="date" name="dob" id="dob" placeholder="Date of Birth (e.g. MM/DD/YYYY)" onkeyup='checkNotEmpty1();' required/>
+            <input type="date" name="dob" id="dob" placeholder="Date of Birth (e.g. MM/DD/YYYY)" onkeyup='checkNotEmptyRed(this.id);' required/>
 
             <label id="iconhomephone" for="homephone"><i class="fas fa-phone"></i></label>
-            <input type="text" name="homephone" id="homephone" placeholder="Home Phone Number   (###) ###-####" onkeyup='checkNotEmpty1();' required/>
+            <input type="text" name="homephone" id="homephone" placeholder="Home Phone Number   (###) ###-####" onkeyup='checkNotEmptyBlue(this.id);' required/>
 
             <label id="iconmobilephone" for="mobilephone"><i class="fas fa-phone"></i></label>
-            <input type="text" name="mobilephone" id="mobilephone" placeholder="Mobile Phone Number   (###) ###-####" onkeyup='checkNotEmpty1();' required/>
+            <input type="text" name="mobilephone" id="mobilephone" placeholder="Mobile Phone Number   (###) ###-####" onkeyup='checkNotEmptyRed(this.id);' required/>
 
             <label id="iconinterphone" for="interphone"><i class="fas fa-phone"></i></label>
-            <input type="text" name="interphone" id="interphone" placeholder="International Phone Number" onkeyup='checkNotEmpty1();' required/>
+            <input type="text" name="interphone" id="interphone" placeholder="International Phone Number" onkeyup='checkNotEmptyBlue(this.id);' required/>
 
         </div>
 
@@ -112,56 +108,56 @@
             <h2>Work Contact Information</h2>
             <hr>
             <label id="iconemployer" for="employer"><i class="fas fa-user"></i></label>
-            <input type="text" name="employer" id="employer" placeholder="Employer" onkeyup='checkNotEmpty2();' required>
+            <input type="text" name="employer" id="employer" placeholder="Employer" onkeyup='checkNotEmptyRed(this.id);' required>
 
             <label id="iconjobtitle" for="jobtitle"><i class="fas fa-user"></i></label>
-            <input type="text" name="jobtitle" id="jobtitle" placeholder="Job Title" onkeyup='checkNotEmpty2();' required>
+            <input type="text" name="jobtitle" id="jobtitle" placeholder="Job Title" onkeyup='checkNotEmptyRed(this.id);' required>
 
             <label id="icondivision" for="division"><i class="fas fa-user"></i></label>
-            <input type="text" name="division" id="division" placeholder="Division / Branch" onkeyup='checkNotEmpty2();' required>
+            <input type="text" name="division" id="division" placeholder="Division / Branch" onkeyup='checkNotEmptyRed(this.id);' required>
 
             <hr>
             <h3>Work Address</h3>
 
             <label id="iconworkstreetaddress" for="workstreetaddress"><i class="fas fa-globe"></i></label>
-            <input type="text" name="workstreetaddress" id="workstreetaddress" placeholder="Street Address" onkeyup='checkNotEmpty2();' required>
+            <input type="text" name="workstreetaddress" id="workstreetaddress" placeholder="Street Address" onkeyup='checkNotEmptyRed(this.id);' required>
 
             <label id="iconworkaddress2" for="workaddress2"><i class="fas fa-globe"></i></label>
-            <input type="text" name="workaddress2" id="workaddress2" placeholder="Address Line 2" onkeyup='checkNotEmpty2();' required>
+            <input type="text" name="workaddress2" id="workaddress2" placeholder="Address Line 2" onkeyup='checkNotEmptyBlue(this.id);' required>
 
             <div class="inline-input">
                 <div class="inline-input-block">
                     <label id="iconworkcity" for="workcity"><i class="fas fa-globe"></i></label>
-                    <input type="text" name="workcity" id="workcity" placeholder="City" onkeyup='checkNotEmpty2();' required/>
+                    <input type="text" name="workcity" id="workcity" placeholder="City" onkeyup='checkNotEmptyRed(this.id);' required/>
                 </div>
                 
                 <div class="inline-input-block">
                     <label id="iconworkstate" for="workstate"><i class="fas fa-globe"></i></label>
-                    <input type="text" name="workstate" id="workstate" placeholder="State / Province / Region" onkeyup='checkNotEmpty2();' required/>     
+                    <input type="text" name="workstate" id="workstate" placeholder="State / Province / Region" onkeyup='checkNotEmptyRed(this.id);' required/>     
                 </div>
             </div>
 
             <div class="inline-input">
                 <div class="inline-input-block">
                     <label id="iconworkpostal" for="workpostal"><i class="fas fa-globe"></i></label>
-                    <input type="text" name="workpostal" id="workpostal" placeholder="Postal / Zip Code" onkeyup='checkNotEmpty2();' required/>
+                    <input type="text" name="workpostal" id="workpostal" placeholder="Postal / Zip Code" onkeyup='checkNotEmptyRed(this.id);' required/>
                 </div>
                 
                 <div class="inline-input-block">
                     <label id="iconworkcountry" for="workcountry"><i class="fas fa-globe"></i></label>      
-                    <input type="text" name="workcountry" id="workcountry"  placeholder="Country" onkeyup='checkNotEmpty2();' required>
+                    <input type="text" name="workcountry" id="workcountry"  placeholder="Country" onkeyup='checkNotEmptyRed(this.id);' required>
                 </div>
             </div>
             <hr>
 
             <label id="iconworkhomephone" for="workhomephone"><i class="fas fa-phone"></i></label>
-            <input type="text" name="workhomephone" id="workhomephone" placeholder="Work Phone Number   (###) ###-####" onkeyup='checkNotEmpty2();' required/>
+            <input type="text" name="workhomephone" id="workhomephone" placeholder="Work Phone Number   (###) ###-####" onkeyup='checkNotEmptyBlue(this.id);' required/>
 
             <label id="iconworkmobilephone" for="workmobilephone"><i class="fas fa-phone"></i></label>
-            <input type="text" name="workmobilephone" id="workmobilephone" placeholder="Work Mobile Number   (###) ###-####" onkeyup='checkNotEmpty2();' required/>
+            <input type="text" name="workmobilephone" id="workmobilephone" placeholder="Work Mobile Number   (###) ###-####" onkeyup='checkNotEmptyRed(this.id);' required/>
 
             <label id="iconworkemail" for="workemail"><i class="fas fa-envelope"></i></label>
-            <input type="email" name="workemail" id="workemail" placeholder="Work Email" onkeyup='checkNotEmpty2();' required/>
+            <input type="email" name="workemail" id="workemail" placeholder="Work Email" onkeyup='checkNotEmptyRed(this.id);' required/>
 
         </div>
 
@@ -172,96 +168,96 @@
 
             <h3>Formation 1</h3>
             <label id="iconuni1" for="uni1"><i class="fas fa-user-graduate"></i></label>
-            <input type="text" name="uni1" id="uni1" placeholder="College/University" onkeyup='checkNotEmpty3();' required/>
+            <input type="text" name="uni1" id="uni1" placeholder="College/University" onkeyup='checkNotEmptyRed(this.id);' required/>
 
             <label id="icondegree1" for="degree1"><i class="fas fa-user-graduate"></i></label>
-            <input type="text" name="degree1" id="degree1" placeholder="Degree Received (Abbreviations OK)" onkeyup='checkNotEmpty3();' required/>
+            <input type="text" name="degree1" id="degree1" placeholder="Degree Received (Abbreviations OK)" onkeyup='checkNotEmptyRed(this.id);' required/>
 
             <div class="inline-input">
                 <div class="inline-input-block">
                     <label id="iconmonthfrom1" for="monthfrom1"><i class="fas fa-calendar"></i></label>
-                    <input type="text" name="monthfrom1" id="monthfrom1" placeholder="Month From" onkeyup='checkNotEmpty3();' required/>
+                    <input type="text" name="monthfrom1" id="monthfrom1" placeholder="Month From" onkeyup='checkNotEmptyRed(this.id);' required/>
                 </div>
                 
                 <div class="inline-input-block">
                     <label id="iconyearfrom1" for="yearfrom1"><i class="fas fa-calendar"></i></label>
-                    <input type="text" name="yearfrom1" id="yearfrom1" placeholder="Year From" onkeyup='checkNotEmpty3();' required/>     
+                    <input type="text" name="yearfrom1" id="yearfrom1" placeholder="Year From" onkeyup='checkNotEmptyRed(this.id);' required/>     
                 </div>
             </div>
 
             <div class="inline-input">
                 <div class="inline-input-block">
                     <label id="iconmonthto1" for="monthto1"><i class="fas fa-calendar"></i></label>
-                    <input type="text" name="monthto1" id="monthto1" placeholder="Month To" onkeyup='checkNotEmpty3();' required/>
+                    <input type="text" name="monthto1" id="monthto1" placeholder="Month To" onkeyup='checkNotEmptyRed(this.id);' required/>
                 </div>
                 
                 <div class="inline-input-block">
                     <label id="iconyearto1" for="yearto1"><i class="fas fa-calendar"></i></label>
-                    <input type="text" name="yearto1" id="yearto1" placeholder="Year To" onkeyup='checkNotEmpty3();' required/>     
+                    <input type="text" name="yearto1" id="yearto1" placeholder="Year To" onkeyup='checkNotEmptyRed(this.id);' required/>     
                 </div>
             </div>
             <hr>
 
             <h3>Formation 2</h3>
             <label id="iconuni2" for="uni2"><i class="fas fa-user-graduate"></i></label>
-            <input type="text" name="uni2" id="uni2" placeholder="College/University" onkeyup='checkNotEmpty3();' required/>
+            <input type="text" name="uni2" id="uni2" placeholder="College/University" onkeyup='checkNotEmptyBlue(this.id);' required/>
 
             <label id="icondegree2" for="degree2"><i class="fas fa-user-graduate"></i></label>
-            <input type="text" name="degree2" id="degree2" placeholder="Degree Received (Abbreviations OK)" onkeyup='checkNotEmpty3();' required/>
+            <input type="text" name="degree2" id="degree2" placeholder="Degree Received (Abbreviations OK)" onkeyup='checkNotEmptyBlue(this.id);' required/>
 
             <div class="inline-input">
                 <div class="inline-input-block">
                     <label id="iconmonthfrom2" for="monthfrom2"><i class="fas fa-calendar"></i></label>
-                    <input type="text" name="monthfrom2" id="monthfrom2" placeholder="Month From" onkeyup='checkNotEmpty3();' required/>
+                    <input type="text" name="monthfrom2" id="monthfrom2" placeholder="Month From" onkeyup='checkNotEmptyBlue(this.id);' required/>
                 </div>
                 
                 <div class="inline-input-block">
                     <label id="iconyearfrom2" for="yearfrom2"><i class="fas fa-calendar"></i></label>
-                    <input type="text" name="yearfrom2" id="yearfrom2" placeholder="Year From" onkeyup='checkNotEmpty3();' required/>     
+                    <input type="text" name="yearfrom2" id="yearfrom2" placeholder="Year From" onkeyup='checkNotEmptyBlue(this.id);' required/>     
                 </div>
             </div>
 
             <div class="inline-input">
                 <div class="inline-input-block">
                     <label id="iconmonthto2" for="monthto2"><i class="fas fa-calendar"></i></label>
-                    <input type="text" name="monthto2" id="monthto2" placeholder="Month To" onkeyup='checkNotEmpty3();' required/>
+                    <input type="text" name="monthto2" id="monthto2" placeholder="Month To" onkeyup='checkNotEmptyBlue(this.id);' required/>
                 </div>
                 
                 <div class="inline-input-block">
                     <label id="iconyearto2" for="yearto2"><i class="fas fa-calendar"></i></label>
-                    <input type="text" name="yearto2" id="yearto2" placeholder="Year To" onkeyup='checkNotEmpty3();' required/>     
+                    <input type="text" name="yearto2" id="yearto2" placeholder="Year To" onkeyup='checkNotEmptyBlue(this.id);' required/>     
                 </div>
             </div>
             <hr>
 
             <h3>Formation 3</h3>
             <label id="iconuni3" for="uni3"><i class="fas fa-user-graduate"></i></label>
-            <input type="text" name="uni3" id="uni3" placeholder="College/University" onkeyup='checkNotEmpty3();' required/>
+            <input type="text" name="uni3" id="uni3" placeholder="College/University" onkeyup='checkNotEmptyBlue(this.id);' required/>
 
             <label id="icondegree3" for="degree3"><i class="fas fa-user-graduate"></i></label>
-            <input type="text" name="degree3" id="degree3" placeholder="Degree Received (Abbreviations OK)" onkeyup='checkNotEmpty3();' required/>
+            <input type="text" name="degree3" id="degree3" placeholder="Degree Received (Abbreviations OK)" onkeyup='checkNotEmptyBlue(this.id);' required/>
 
             <div class="inline-input">
                 <div class="inline-input-block">
                     <label id="iconmonthfrom3" for="monthfrom3"><i class="fas fa-calendar"></i></label>
-                    <input type="text" name="monthfrom3" id="monthfrom3" placeholder="Month From" onkeyup='checkNotEmpty3();' required/>
+                    <input type="text" name="monthfrom3" id="monthfrom3" placeholder="Month From" onkeyup='checkNotEmptyBlue(this.id);' required/>
                 </div>
                 
                 <div class="inline-input-block">
                     <label id="iconyearfrom3" for="yearfrom3"><i class="fas fa-calendar"></i></label>
-                    <input type="text" name="yearfrom3" id="yearfrom3" placeholder="Year From" onkeyup='checkNotEmpty3();' required/>     
+                    <input type="text" name="yearfrom3" id="yearfrom3" placeholder="Year From" onkeyup='checkNotEmptyBlue(this.id);' required/>     
                 </div>
             </div>
 
             <div class="inline-input">
                 <div class="inline-input-block">
                     <label id="iconmonthto3" for="monthto3"><i class="fas fa-calendar"></i></label>
-                    <input type="text" name="monthto3" id="monthto3" placeholder="Month To" onkeyup='checkNotEmpty3();' required/>
+                    <input type="text" name="monthto3" id="monthto3" placeholder="Month To" onkeyup='checkNotEmptyBlue(this.id);' required/>
                 </div>
                 
                 <div class="inline-input-block">
                     <label id="iconyearto3" for="yearto3"><i class="fas fa-calendar"></i></label>
-                    <input type="text" name="yearto3" id="yearto3" placeholder="Year To" onkeyup='checkNotEmpty3();' required/>     
+                    <input type="text" name="yearto3" id="yearto3" placeholder="Year To" onkeyup='checkNotEmptyBlue(this.id);' required/>     
                 </div>
             </div>
         </div>
@@ -274,7 +270,7 @@
             <div class="inline-input">
                 <div class="inline-input-block">
                     <label id="iconhear" for="hear"><i class="fas fa-font"></i></label>      
-                    <select id="hear" name="hear" class="form-control" onchange='checkNotEmpty4();' required>
+                    <select id="hear" name="hear" class="form-control" onchange='checkNotEmptyBlue(this.id);' required>
                         <option value="" selected disabled>Please select...</option>
                         <option value="colleague">Colleague</option>
                         <option value="conf">Conference</option>
@@ -287,41 +283,41 @@
 
                 <div class="inline-input-block">
                     <label id="iconconference" for="conference"><i class="fas fa-font"></i></label>
-                    <input type="text" name="conference" id="conference" placeholder="(Please specify the conference)" onkeyup='checkNotEmpty4();' required/>
+                    <input type="text" name="conference" id="conference" placeholder="(Please specify the conference)" onkeyup='checkNotEmptyBlue(this.id);' required/>
                 </div>
             </div>
             <br>
 
             <h3>Other</h3>
             <label id="iconotherC" for="otherC"><i class="fas fa-font"></i></label>
-            <input type="text" name="otherC" id="otherC" onkeyup='checkNotEmpty4();' required/>
+            <input type="text" name="otherC" id="otherC" onkeyup='checkNotEmptyBlue(this.id);' required/>
             <br><br>
 
             <h3>Please describe your work responsabilities and professional experience.</h3>
             <label id="iconexperience" for="experience"><i class="fas fa-font"></i></label>
-            <input type="text" name="experience" id="conference" onkeyup='checkNotEmpty4();' required/>
+            <input type="text" name="experience" id="conference" onkeyup='checkNotEmptyBlue(this.id);' required/>
             <br><br>
 
             <h3>Please indicate why you wish to attend this certificate program and how you feel this program will be beneficial to you.</h3>
             <label id="iconwhy" for="why"><i class="fas fa-font"></i></label>
-            <input type="text" name="why" id="why" onkeyup='checkNotEmpty4();' required/>
+            <input type="text" name="why" id="why" onkeyup='checkNotEmptyBlue(this.id);' required/>
             <br><br>
 
             <h3>Please upload your Resume/CV</h3>
             <label id="iconcv" for="cv"><i class="fas fa-file"></i></label>
-            <input type="file" name="cv" id="cv" onkeyup='checkNotEmpty4();' required/>
+            <input type="file" name="cv" id="cv" onkeyup='checkNotEmptyBlue(this.id);' required/>
             <br><br>
 
             <h3>Are you an employee of a non-profit organizaion?</h3>
-            <input type="radio" value="yes" id="yesNPO" name="NPO" onkeyup='checkNotEmpty4();' required/>
+            <input type="radio" value="yes" id="yesNPO" name="NPO" onkeyup='checkNotEmptyBlue(this.id);' required/>
             <label for="yesNPO" class="radio">Yes</label>
-            <input type="radio" value="no" id="noNPO" name="NPO" checkedonkeyup='checkNotEmpty4();' required/>
+            <input type="radio" value="no" id="noNPO" name="NPO" checkedonkeyup='checkNotEmptyBlue(this.id);' required/>
             <label for="noNPO" class="radio">No</label>
             <br><br>
 
             <h3>Do you have any special dietary or physical considerations of which we should be aware?.</h3>
             <label id="iconspecial" for="special"><i class="fas fa-font"></i></label>
-            <input type="text" name="special" id="special" onkeyup='checkNotEmpty4();' required/>
+            <input type="text" name="special" id="special" onkeyup='checkNotEmptyBlue(this.id);' required/>
         </div>
 
         <!--------------------------------------------------- Page 5 --------------------------------------------------->
@@ -332,7 +328,7 @@
             <h3>Will you be paying by check or credit</h3>
             <input type="radio" value="credit" id="credit" name="pay" checkedonkeyup='y();' required/>
             <label for="credit" class="radio">I will be paying online with a credit card</label>
-            <input type="radio" value="check" id="check" name="pay" onkeyup='checkNotEmpty5();' required/>
+            <input type="radio" value="check" id="check" name="pay" onkeyup='checkNotEmptyBlue(this.id);' required/>
             <label for="check" class="radio">I will be paying by check or EFT</label>
             <br><br>
 
@@ -340,48 +336,48 @@
             <div class="inline-input">
                 <div class="inline-input-block">
                     <label id="iconbillfirstname" for="billfirstname"><i class="fas fa-user"></i></label>
-                    <input type="text" name="billfirstname" id="billfirstname" placeholder="First" onkeyup='checkNotEmpty5();' required/>
+                    <input type="text" name="billfirstname" id="billfirstname" placeholder="First" onkeyup='checkNotEmptyBlue(this.id);' required/>
                 </div>
                 
                 <div class="inline-input-block">
                     <label id="iconbilllastname" for="billlastname"><i class="fas fa-user"></i></label>
-                    <input type="text" name="billlastname" id="billlastname" placeholder="Last" onkeyup='checkNotEmpty5();' required/>     
+                    <input type="text" name="billlastname" id="billlastname" placeholder="Last" onkeyup='checkNotEmptyBlue(this.id);' required/>     
                 </div>
             </div>
 
             <label id="iconbillemail" for="billemail"><i class="fas fa-user"></i></label>
-            <input type="email" name="billemail" id="billemail" placeholder="Billing Contact Email" onkeyup='checkNotEmpty5();' required/>
+            <input type="email" name="billemail" id="billemail" placeholder="Billing Contact Email" onkeyup='checkNotEmptyBlue(this.id);' required/>
 
             <hr>
             <h3>Billing Address</h3>
 
             <label id="iconbillstreetaddress" for="billstreetaddress"><i class="fas fa-globe"></i></label>
-            <input type="text" name="billstreetaddress" id="billstreetaddress" placeholder="Street Address" onkeyup='checkNotEmpty5();' required/>
+            <input type="text" name="billstreetaddress" id="billstreetaddress" placeholder="Street Address" onkeyup='checkNotEmptyBlue(this.id);' required/>
 
             <label id="iconbilladdress2" for="billaddress2"><i class="fas fa-globe"></i></label>
-            <input type="text" name="billaddress2" id="billaddress2" placeholder="Address Line 2" onkeyup='checkNotEmpty5();' required/>
+            <input type="text" name="billaddress2" id="billaddress2" placeholder="Address Line 2" onkeyup='checkNotEmptyBlue(this.id);' required/>
 
             <div class="inline-input">
                 <div class="inline-input-block">
                     <label id="iconbillcity" for="billcity"><i class="fas fa-globe"></i></label>
-                    <input type="text" name="billcity" id="billcity" placeholder="City" onkeyup='checkNotEmpty5();' required/>
+                    <input type="text" name="billcity" id="billcity" placeholder="City" onkeyup='checkNotEmptyBlue(this.id);' required/>
                 </div>
                 
                 <div class="inline-input-block">
                     <label id="iconbillstate" for="billstate"><i class="fas fa-globe"></i></label>
-                    <input type="text" name="billstate" id="billstate" placeholder="State / Province / Region" onkeyup='checkNotEmpty5();' required/>     
+                    <input type="text" name="billstate" id="billstate" placeholder="State / Province / Region" onkeyup='checkNotEmptyBlue(this.id);' required/>     
                 </div>
             </div>
 
             <div class="inline-input">
                 <div class="inline-input-block">
                     <label id="iconbillpostal" for="billpostal"><i class="fas fa-globe"></i></label>
-                    <input type="text" name="billpostal" id="billpostal" placeholder="Postal / Zip Code" onkeyup='checkNotEmpty5();' required/>
+                    <input type="text" name="billpostal" id="billpostal" placeholder="Postal / Zip Code" onkeyup='checkNotEmptyBlue(this.id);' required/>
                 </div>
                 
                 <div class="inline-input-block">
                     <label id="iconbillcountry" for="billcountry"><i class="fas fa-globe"></i></label>      
-                    <input type="text" name="billcountry" id="billcountry"  placeholder="Country" onkeyup='checkNotEmpty5();' required>
+                    <input type="text" name="billcountry" id="billcountry"  placeholder="Country" onkeyup='checkNotEmptyBlue(this.id);' required>
                 </div>
             </div>
             <hr>

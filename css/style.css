@@ -205,12 +205,14 @@ select {
     color: rgb(117,117,117);
 }
 
-input:hover, input:valid, select:hover, select:valid {
-    border: 1px solid transparent;
-    box-shadow: 0 0 3px 0 blue;
+input:hover, select:hover {
+    border: 1px solid transparent !important;
+    box-shadow: 0 0 3px 0 black !important;
 }
 
 input:valid, select:valid {
+    border: 1px solid transparent;
+    box-shadow: 0 0 3px 0 blue;
     color: blue;
 }
 
