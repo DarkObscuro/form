@@ -9,13 +9,21 @@ html, body {
     height: 100%;
 }
 
-body, div, h1, form, input, p, select { 
+body, div, h1, form, input, select { 
     padding: 0;
     margin: 0;
     outline: none;
     font-family: Roboto, Arial, sans-serif;
     font-size: 16px;
     font-family: Bukra;
+}
+
+p {
+    margin: 0;
+    font-size: 24px !important;
+    font-family: Bukra;
+    text-align: center;
+    color: rgb(36,42,117);
 }
 
 h1 {
@@ -35,7 +43,7 @@ h2 {
     font-size: 32px;
     font-weight: 300;
     text-align: center;
-    color: rgb(36,42,117)
+    color: rgb(36,42,117);
 }
 
 h3 {
@@ -44,7 +52,7 @@ h3 {
     font-size: 20px;
     font-weight: 300;
     text-align: left;
-    color: rgb(36,42,117)
+    color: rgb(36,42,117);
 }
 
 p {
@@ -147,7 +155,7 @@ label.radio:before {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: rgb(36,42,117);
+    background: blue;
 }
 
 label.radio:after {
@@ -245,14 +253,14 @@ button {
     margin: 10px auto;
     border-radius: 5px; 
     border: none;
-    background: rgb(36,42,117); 
+    background: blue; 
     font-size: 14px;
     font-weight: 600;
     color: #fff;
 }
 
 button:hover {
-    background: rgb(48,157,181);
+    background: rgb(36,42,117);
     cursor: pointer;
 }
 
