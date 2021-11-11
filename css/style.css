@@ -34,6 +34,7 @@ h1 {
     color: blue;
     background: -webkit-linear-gradient(45deg,blue, red);
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
 }
 
