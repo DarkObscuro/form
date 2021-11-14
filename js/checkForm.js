@@ -13,7 +13,7 @@ var checkFormFields1 = function() {
     var mobile_phone = document.getElementById('mobilephone');
     var comments = document.getElementById('comments');
     var check = first_name.value && last_name.value && email.value && street_address.value && city.value && region.value && postal.value && country.value && citizenship.value && dob.value && mobile_phone.value;
-
+    
     if (check) {
         comments.innerHTML = '';
     } else {
