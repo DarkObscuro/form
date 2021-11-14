@@ -7,11 +7,342 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css?version=4">
+    <link rel="stylesheet" href="css/style.css?version=5s">
     <script src="js/phoneFields.js" type="text/javascript"></script>
     <script src="js/checkField.js" type="text/javascript"></script>
     <script src="js/checkForm.js" type="text/javascript"></script>
   </head>
+
+    <datalist id="years">
+        <option value="1950">
+        <option value="1951">
+        <option value="1952">
+        <option value="1953">
+        <option value="1954">
+        <option value="1955">
+        <option value="1956">
+        <option value="1957">
+        <option value="1958">
+        <option value="1959">
+        <option value="1960">
+        <option value="1961">
+        <option value="1862">
+        <option value="1963">
+        <option value="1964">
+        <option value="1965">
+        <option value="1966">
+        <option value="1967">
+        <option value="1968">
+        <option value="1969">
+        <option value="1970">
+        <option value="1971">
+        <option value="1072">
+        <option value="1073">
+        <option value="1974">
+        <option value="1975">
+        <option value="1976">
+        <option value="1977">
+        <option value="1978">
+        <option value="1079">
+        <option value="1980">
+        <option value="1981">
+        <option value="1982">
+        <option value="1983">
+        <option value="1984">
+        <option value="1985">
+        <option value="1986">
+        <option value="1987">
+        <option value="1988">
+        <option value="1989">
+        <option value="1990">
+        <option value="1991">
+        <option value="1992">
+        <option value="1993">
+        <option value="1994">
+        <option value="1995">
+        <option value="1996">
+        <option value="1997">
+        <option value="1998">
+        <option value="1999">
+        <option value="2000">
+        <option value="2001">
+        <option value="2002">
+        <option value="2003">
+        <option value="2004">
+        <option value="2005">
+        <option value="2006">
+        <option value="2007">
+        <option value="2008">
+        <option value="2009">
+        <option value="2010">
+        <option value="2011">
+        <option value="2012">
+        <option value="2013">
+        <option value="2014">
+        <option value="2015">
+        <option value="2016">
+        <option value="2017">
+        <option value="2018">
+        <option value="2019">
+        <option value="2020">
+        <option value="2021">
+        <option value="2022">
+        <option value="2023">
+        <option value="2024">
+        <option value="2025">
+        <option value="2026">
+        <option value="2027">
+        <option value="2028">
+        <option value="2029">
+        <option value="2030">
+    </datalist>
+
+    <datalist id="countries">
+        <option value="Afghanistan">
+        <option value="Åland Islands">
+        <option value="Albania">
+        <option value="Algeria">
+        <option value="American Samoa">
+        <option value="Andorra">
+        <option value="Angola">
+        <option value="Anguilla">
+        <option value="Antarctica">
+        <option value="Antigua and Barbuda">
+        <option value="Argentina">
+        <option value="Armenia">
+        <option value="Aruba">
+        <option value="Australia">
+        <option value="Austria">
+        <option value="Azerbaijan">
+        <option value="Bahamas">
+        <option value="Bahrain">
+        <option value="Bangladesh">
+        <option value="Barbados">
+        <option value="Belarus">
+        <option value="Belgium">
+        <option value="Belize">
+        <option value="Benin">
+        <option value="Bermuda">
+        <option value="Bhutan">
+        <option value="Bolivia">
+        <option value="Bosnia and Herzegovina">
+        <option value="Botswana">
+        <option value="Bouvet Island">
+        <option value="Brazil">
+        <option value="British Indian Ocean Territory">
+        <option value="Brunei Darussalam">
+        <option value="Bulgaria">
+        <option value="Burkina Faso">
+        <option value="Burundi">
+        <option value="Cambodia">
+        <option value="Cameroon">
+        <option value="Canada">
+        <option value="Cape Verde">
+        <option value="Cayman Islands">
+        <option value="Central African Republic">
+        <option value="Chad">
+        <option value="Chile">
+        <option value="China">
+        <option value="Christmas Island">
+        <option value="Cocos (Keeling) Islands">
+        <option value="Colombia">
+        <option value="Comoros">
+        <option value="Congo">
+        <option value="Congo, The Democratic Republic of The">
+        <option value="Cook Islands">
+        <option value="Costa Rica">
+        <option value="Cote D'ivoire">
+        <option value="Croatia">
+        <option value="Cuba">
+        <option value="Cyprus">
+        <option value="Czech Republic">
+        <option value="Denmark">
+        <option value="Djibouti">
+        <option value="Dominica">
+        <option value="Dominican Republic">
+        <option value="Ecuador">
+        <option value="Egypt">
+        <option value="El Salvador">
+        <option value="Equatorial Guinea">
+        <option value="Eritrea">
+        <option value="Estonia">
+        <option value="Ethiopia">
+        <option value="Falkland Islands (Malvinas)">
+        <option value="Faroe Islands">
+        <option value="Fiji">
+        <option value="Finland">
+        <option value="France">
+        <option value="French Guiana">
+        <option value="French Polynesia">
+        <option value="French Southern Territories">
+        <option value="Gabon">
+        <option value="Gambia">
+        <option value="Georgia">
+        <option value="Germany">
+        <option value="Ghana">
+        <option value="Gibraltar">
+        <option value="Greece">
+        <option value="Greenland">
+        <option value="Grenada">
+        <option value="Guadeloupe">
+        <option value="Guam">
+        <option value="Guatemala">
+        <option value="Guernsey">
+        <option value="Guinea">
+        <option value="Guinea-bissau">
+        <option value="Guyana">
+        <option value="Haiti">
+        <option value="Heard Island and Mcdonald Islands">
+        <option value="Holy See (Vatican City State)">
+        <option value="Honduras">
+        <option value="Hong Kong">
+        <option value="Hungary">
+        <option value="Iceland">
+        <option value="India">
+        <option value="Indonesia">
+        <option value="Iran, Islamic Republic of">
+        <option value="Iraq">
+        <option value="Ireland">
+        <option value="Isle of Man">
+        <option value="Israel">
+        <option value="Italy">
+        <option value="Jamaica">
+        <option value="Japan">
+        <option value="Jersey">
+        <option value="Jordan">
+        <option value="Kazakhstan">
+        <option value="Kenya">
+        <option value="Kiribati">
+        <option value="Korea, Democratic People's Republic of">
+        <option value="Korea, Republic of">
+        <option value="Kuwait">
+        <option value="Kyrgyzstan">
+        <option value="Lao People's Democratic Republic">
+        <option value="Latvia">
+        <option value="Lebanon">
+        <option value="Lesotho">
+        <option value="Liberia">
+        <option value="Libyan Arab Jamahiriya">
+        <option value="Liechtenstein">
+        <option value="Lithuania">
+        <option value="Luxembourg">
+        <option value="Macao">
+        <option value="Macedonia, The Former Yugoslav Republic of">
+        <option value="Madagascar">
+        <option value="Malawi">
+        <option value="Malaysia">
+        <option value="Maldives">
+        <option value="Mali">
+        <option value="Malta">
+        <option value="Marshall Islands">
+        <option value="Martinique">
+        <option value="Mauritania">
+        <option value="Mauritius">
+        <option value="Mayotte">
+        <option value="Mexico">
+        <option value="Micronesia, Federated States of">
+        <option value="Moldova, Republic of">
+        <option value="Monaco">
+        <option value="Mongolia">
+        <option value="Montenegro">
+        <option value="Montserrat">
+        <option value="Morocco">
+        <option value="Mozambique">
+        <option value="Myanmar">
+        <option value="Namibia">
+        <option value="Nauru">
+        <option value="Nepal">
+        <option value="Netherlands">
+        <option value="Netherlands Antilles">
+        <option value="New Caledonia">
+        <option value="New Zealand">
+        <option value="Nicaragua">
+        <option value="Niger">
+        <option value="Nigeria">
+        <option value="Niue">
+        <option value="Norfolk Island">
+        <option value="Northern Mariana Islands">
+        <option value="Norway">
+        <option value="Oman">
+        <option value="Pakistan">
+        <option value="Palau">
+        <option value="Palestinian Territory, Occupied">
+        <option value="Panama">
+        <option value="Papua New Guinea">
+        <option value="Paraguay">
+        <option value="Peru">
+        <option value="Philippines">
+        <option value="Pitcairn">
+        <option value="Poland">
+        <option value="Portugal">
+        <option value="Puerto Rico">
+        <option value="Qatar">
+        <option value="Reunion">
+        <option value="Romania">
+        <option value="Russian Federation">
+        <option value="Rwanda">
+        <option value="Saint Helena">
+        <option value="Saint Kitts and Nevis">
+        <option value="Saint Lucia">
+        <option value="Saint Pierre and Miquelon">
+        <option value="Saint Vincent and The Grenadines">
+        <option value="Samoa">
+        <option value="San Marino">
+        <option value="Sao Tome and Principe">
+        <option value="Saudi Arabia">
+        <option value="Senegal">
+        <option value="Serbia">
+        <option value="Seychelles">
+        <option value="Sierra Leone">
+        <option value="Singapore">
+        <option value="Slovakia">
+        <option value="Slovenia">
+        <option value="Solomon Islands">
+        <option value="Somalia">
+        <option value="South Africa">
+        <option value="South Georgia and The South Sandwich Islands">
+        <option value="Spain">
+        <option value="Sri Lanka">
+        <option value="Sudan">
+        <option value="Suriname">
+        <option value="Svalbard and Jan Mayen">
+        <option value="Swaziland">
+        <option value="Sweden">
+        <option value="Switzerland">
+        <option value="Syrian Arab Republic">
+        <option value="Taiwan">
+        <option value="Tajikistan">
+        <option value="Tanzania, United Republic of">
+        <option value="Thailand">
+        <option value="Timor-leste">
+        <option value="Togo">
+        <option value="Tokelau">
+        <option value="Tonga">
+        <option value="Trinidad and Tobago">
+        <option value="Tunisia">
+        <option value="Turkey">
+        <option value="Turkmenistan">
+        <option value="Turks and Caicos Islands">
+        <option value="Tuvalu">
+        <option value="Uganda">
+        <option value="Ukraine">
+        <option value="United Arab Emirates">
+        <option value="United Kingdom">
+        <option value="United States">
+        <option value="United States Minor Outlying Islands">
+        <option value="Uruguay">
+        <option value="Uzbekistan">
+        <option value="Vanuatu">
+        <option value="Venezuela">
+        <option value="Viet Nam">
+        <option value="Virgin Islands, British">
+        <option value="Virgin Islands, U.S.">
+        <option value="Wallis and Futuna">
+        <option value="Western Sahara">
+        <option value="Yemen">
+        <option value="Zambia">
+        <option value="Zimbabwe">
+    </datalist>
 
   <body>
     <div class="header">
@@ -89,14 +420,14 @@
                 
                 <div class="inline-input-block">
                     <label id="iconcountry" for="country"><i class="fas fa-globe"></i></label>      
-                    <input type="text" name="country" id="country"  placeholder="Country" onkeyup='checkNotEmptyRed(this.id);' required>
+                    <input type="text" name="country" id="country" list="countries" placeholder="Country" onkeyup='checkNotEmptyRed(this.id);' required>
                 </div>
             </div>
 
             <hr>
 
             <label id="iconcitizenship" for="citizenship"><i class="fas fa-globe"></i></label>      
-            <input type="text" name="citizenship" id="citizenship"  placeholder="Citizenship" onkeyup='checkNotEmptyRed(this.id);' required>
+            <input type="text" name="citizenship" id="citizenship" list="countries" placeholder="Citizenship" onkeyup='checkNotEmptyRed(this.id);' required>
             
             <label id="icondob" for="dob"><i class="fas fa-calendar"></i></label>
             <input type="date" name="dob" id="dob" placeholder="Date of Birth" onkeyup='checkNotEmptyRed(this.id);' required/>
@@ -154,7 +485,7 @@
                 
                 <div class="inline-input-block">
                     <label id="iconworkcountry" for="workcountry"><i class="fas fa-globe"></i></label>      
-                    <input type="text" name="workcountry" id="workcountry"  placeholder="Country" onkeyup='checkNotEmptyRed(this.id);' required>
+                    <input type="text" name="workcountry" id="workcountry" list="countries" placeholder="Country" onkeyup='checkNotEmptyRed(this.id);' required>
                 </div>
             </div>
             <hr>
@@ -185,24 +516,52 @@
             <div class="inline-input">
                 <div class="inline-input-block">
                     <label id="iconmonthfrom1" for="monthfrom1"><i class="fas fa-calendar"></i></label>
-                    <input type="text" name="monthfrom1" id="monthfrom1" placeholder="Month From" onkeyup='checkNotEmptyRed(this.id);' required/>
+                    <select id="monthfrom1" name="monthfrom1" class="form-control" onchange='checkNotEmptyRed(this.id);' required>
+                        <option value="" selected disabled>From month...</option>
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                    </select>
                 </div>
                 
                 <div class="inline-input-block">
                     <label id="iconyearfrom1" for="yearfrom1"><i class="fas fa-calendar"></i></label>
-                    <input type="text" name="yearfrom1" id="yearfrom1" placeholder="Year From" onkeyup='checkNotEmptyRed(this.id);' required/>     
+                    <input type="number" name="yearfrom1" id="yearfrom1" list="years" placeholder="From year" onkeyup='checkNotEmptyRed(this.id);' required/>     
                 </div>
             </div>
 
             <div class="inline-input">
                 <div class="inline-input-block">
                     <label id="iconmonthto1" for="monthto1"><i class="fas fa-calendar"></i></label>
-                    <input type="text" name="monthto1" id="monthto1" placeholder="Month To" onkeyup='checkNotEmptyRed(this.id);' required/>
+                    <select id="monthto1" name="monthto1" class="form-control" onchange='checkNotEmptyRed(this.id);' required>
+                        <option value="" selected disabled>To month...</option>
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                    </select>
                 </div>
                 
                 <div class="inline-input-block">
                     <label id="iconyearto1" for="yearto1"><i class="fas fa-calendar"></i></label>
-                    <input type="text" name="yearto1" id="yearto1" placeholder="Year To" onkeyup='checkNotEmptyRed(this.id);' required/>     
+                    <input type="number" name="yearto1" id="yearto1" list="years" placeholder="To year" onkeyup='checkNotEmptyRed(this.id);' required/>     
                 </div>
             </div>
             <hr>
@@ -217,24 +576,52 @@
             <div class="inline-input">
                 <div class="inline-input-block">
                     <label id="iconmonthfrom2" for="monthfrom2"><i class="fas fa-calendar"></i></label>
-                    <input type="text" name="monthfrom2" id="monthfrom2" placeholder="Month From" onkeyup='checkNotEmptyBlue(this.id);' required/>
+                    <select id="monthfrom2" name="monthfrom2" class="form-control" onchange='checkNotEmptyBlue(this.id);' required>
+                        <option value="" selected disabled>From month...</option>
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                    </select>
                 </div>
                 
                 <div class="inline-input-block">
                     <label id="iconyearfrom2" for="yearfrom2"><i class="fas fa-calendar"></i></label>
-                    <input type="text" name="yearfrom2" id="yearfrom2" placeholder="Year From" onkeyup='checkNotEmptyBlue(this.id);' required/>     
+                    <input type="number" name="yearfrom2" id="yearfrom2" list="years" placeholder="From year" onkeyup='checkNotEmptyBlue(this.id);' required/>     
                 </div>
             </div>
 
             <div class="inline-input">
                 <div class="inline-input-block">
                     <label id="iconmonthto2" for="monthto2"><i class="fas fa-calendar"></i></label>
-                    <input type="text" name="monthto2" id="monthto2" placeholder="Month To" onkeyup='checkNotEmptyBlue(this.id);' required/>
+                    <select id="monthto2" name="monthto2" class="form-control" onchange='checkNotEmptyBlue(this.id);' required>
+                        <option value="" selected disabled>To month...</option>
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                    </select>
                 </div>
                 
                 <div class="inline-input-block">
                     <label id="iconyearto2" for="yearto2"><i class="fas fa-calendar"></i></label>
-                    <input type="text" name="yearto2" id="yearto2" placeholder="Year To" onkeyup='checkNotEmptyBlue(this.id);' required/>     
+                    <input type="number" name="yearto2" id="yearto2" list="years" placeholder="To year" onkeyup='checkNotEmptyBlue(this.id);' required/>     
                 </div>
             </div>
             <hr>
@@ -249,24 +636,52 @@
             <div class="inline-input">
                 <div class="inline-input-block">
                     <label id="iconmonthfrom3" for="monthfrom3"><i class="fas fa-calendar"></i></label>
-                    <input type="text" name="monthfrom3" id="monthfrom3" placeholder="Month From" onkeyup='checkNotEmptyBlue(this.id);' required/>
+                    <select id="monthfrom3" name="monthfrom3" class="form-control" onchange='checkNotEmptyBlue(this.id);' required>
+                        <option value="" selected disabled>From month...</option>
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                    </select>
                 </div>
                 
                 <div class="inline-input-block">
                     <label id="iconyearfrom3" for="yearfrom3"><i class="fas fa-calendar"></i></label>
-                    <input type="text" name="yearfrom3" id="yearfrom3" placeholder="Year From" onkeyup='checkNotEmptyBlue(this.id);' required/>     
+                    <input type="number" name="yearfrom3" id="yearfrom3" list="years" placeholder="From year" onkeyup='checkNotEmptyBlue(this.id);' required/>     
                 </div>
             </div>
 
             <div class="inline-input">
                 <div class="inline-input-block">
                     <label id="iconmonthto3" for="monthto3"><i class="fas fa-calendar"></i></label>
-                    <input type="text" name="monthto3" id="monthto3" placeholder="Month To" onkeyup='checkNotEmptyBlue(this.id);' required/>
+                    <select id="monthto3" name="monthto3" class="form-control" onchange='checkNotEmptyBlue(this.id);' required>
+                        <option value="" selected disabled>To month...</option>
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                    </select>
                 </div>
                 
                 <div class="inline-input-block">
                     <label id="iconyearto3" for="yearto3"><i class="fas fa-calendar"></i></label>
-                    <input type="text" name="yearto3" id="yearto3" placeholder="Year To" onkeyup='checkNotEmptyBlue(this.id);' required/>     
+                    <input type="number" name="yearto3" id="yearto3" list="years" placeholder="To year" onkeyup='checkNotEmptyBlue(this.id);' required/>      
                 </div>
             </div>
         </div>
@@ -386,7 +801,7 @@
                 
                 <div class="inline-input-block">
                     <label id="iconbillcountry" for="billcountry"><i class="fas fa-globe"></i></label>      
-                    <input type="text" name="billcountry" id="billcountry"  placeholder="Country" onkeyup='checkNotEmptyBlue(this.id);' required>
+                    <input type="text" name="billcountry" id="billcountry" list="countries" placeholder="Country" onkeyup='checkNotEmptyBlue(this.id);' required>
                 </div>
             </div>
         </div>

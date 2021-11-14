@@ -177,7 +177,7 @@ input[type=radio]:checked + label:after {
     opacity: 1;
 }
 
-input[type=text], input[type=password], input[type=email], input[type=tel], input[type="date"] {
+input[type=text], input[type=password], input[type=email], input[type=tel], input[type="date"], input[type=number] {
     width: calc(100% - 57px);
     height: 36px;
     margin: 13px 0 0 -5px;
@@ -202,6 +202,15 @@ input[type=file] {
 
 input[type=date] {
     color: rgb(117,117,117);
+}
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }
 
 select {
