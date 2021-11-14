@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css?version=5s">
+    <link rel="stylesheet" href="css/style.css?version=7">
     <script src="js/phoneFields.js" type="text/javascript"></script>
     <script src="js/checkField.js" type="text/javascript"></script>
     <script src="js/checkForm.js" type="text/javascript"></script>
@@ -517,7 +517,7 @@
                 <div class="inline-input-block">
                     <label id="iconmonthfrom1" for="monthfrom1"><i class="fas fa-calendar"></i></label>
                     <select id="monthfrom1" name="monthfrom1" class="form-control" onchange='checkNotEmptyRed(this.id);' required>
-                        <option value="" selected disabled>From month...</option>
+                        <option value="" selected disabled>From month</option>
                         <option value="January">January</option>
                         <option value="February">February</option>
                         <option value="March">March</option>
@@ -543,7 +543,7 @@
                 <div class="inline-input-block">
                     <label id="iconmonthto1" for="monthto1"><i class="fas fa-calendar"></i></label>
                     <select id="monthto1" name="monthto1" class="form-control" onchange='checkNotEmptyRed(this.id);' required>
-                        <option value="" selected disabled>To month...</option>
+                        <option value="" selected disabled>To month</option>
                         <option value="January">January</option>
                         <option value="February">February</option>
                         <option value="March">March</option>
@@ -577,7 +577,7 @@
                 <div class="inline-input-block">
                     <label id="iconmonthfrom2" for="monthfrom2"><i class="fas fa-calendar"></i></label>
                     <select id="monthfrom2" name="monthfrom2" class="form-control" onchange='checkNotEmptyBlue(this.id);' required>
-                        <option value="" selected disabled>From month...</option>
+                        <option value="" selected disabled>From month</option>
                         <option value="January">January</option>
                         <option value="February">February</option>
                         <option value="March">March</option>
@@ -603,7 +603,7 @@
                 <div class="inline-input-block">
                     <label id="iconmonthto2" for="monthto2"><i class="fas fa-calendar"></i></label>
                     <select id="monthto2" name="monthto2" class="form-control" onchange='checkNotEmptyBlue(this.id);' required>
-                        <option value="" selected disabled>To month...</option>
+                        <option value="" selected disabled>To month</option>
                         <option value="January">January</option>
                         <option value="February">February</option>
                         <option value="March">March</option>
@@ -637,7 +637,7 @@
                 <div class="inline-input-block">
                     <label id="iconmonthfrom3" for="monthfrom3"><i class="fas fa-calendar"></i></label>
                     <select id="monthfrom3" name="monthfrom3" class="form-control" onchange='checkNotEmptyBlue(this.id);' required>
-                        <option value="" selected disabled>From month...</option>
+                        <option value="" selected disabled>From month</option>
                         <option value="January">January</option>
                         <option value="February">February</option>
                         <option value="March">March</option>
@@ -663,7 +663,7 @@
                 <div class="inline-input-block">
                     <label id="iconmonthto3" for="monthto3"><i class="fas fa-calendar"></i></label>
                     <select id="monthto3" name="monthto3" class="form-control" onchange='checkNotEmptyBlue(this.id);' required>
-                        <option value="" selected disabled>To month...</option>
+                        <option value="" selected disabled>To month</option>
                         <option value="January">January</option>
                         <option value="February">February</option>
                         <option value="March">March</option>
@@ -694,7 +694,7 @@
             <div class="inline-input">
                 <div class="inline-input-block">
                     <label id="iconhear" for="hear"><i class="fas fa-font"></i></label>      
-                    <select id="hear" name="hear" class="form-control" onchange='checkNotEmptyBlue(this.id);' required>
+                    <select id="hear" name="hear" class="form-control" onchange='checkNotEmptyBlue(this.id); checkHear();' required>
                         <option value="" selected disabled>Please select...</option>
                         <option value="colleague">Colleague</option>
                         <option value="conf">Conference</option>
@@ -706,42 +706,39 @@
                 </div>
 
                 <div class="inline-input-block">
-                    <label id="iconconference" for="conference"><i class="fas fa-font"></i></label>
-                    <input type="text" name="conference" id="conference" placeholder="(Please specify the conference)" onkeyup='checkNotEmptyBlue(this.id);' required/>
+                    <label id="iconconference" for="conference" style="display: none;"><i class="fas fa-font"></i></label>
+                    <input type="hidden" name="conference" id="conference" placeholder="Please specify the conference" onkeyup='checkNotEmptyBlue(this.id);' required/>
                 </div>
             </div>
             <br>
 
-            <h3>Other</h3>
-            <label id="iconotherC" for="otherC"><i class="fas fa-font"></i></label>
-            <input type="text" name="otherC" id="otherC" onkeyup='checkNotEmptyBlue(this.id);' required/>
-            <br><br>
+            <h3 id="h3other" style="display: none;">Other:</h3>
+            <label id="iconotherC" for="otherC" style="display: none;"><i class="fas fa-font"></i></label>
+            <input type="hidden" name="otherC" id="otherC" onkeyup='checkNotEmptyBlue(this.id);' placeholder="Other" required/>
+            <br id="h3other2" style="display: none;"><br id="h3other3" style="display: none;">
 
             <h3>Please describe your work responsabilities and professional experience.</h3>
-            <label id="iconexperience" for="experience"><i class="fas fa-font"></i></label>
-            <input type="text" name="experience" id="experience" onkeyup='checkNotEmptyBlue(this.id);' required/>
+            <textarea name="experience" id="experience" onkeyup='checkNotEmptyBlue(this.id);' required></textarea>
             <br><br>
 
             <h3>Please indicate why you wish to attend this certificate program and how you feel this program will be beneficial to you.</h3>
-            <label id="iconwhy" for="why"><i class="fas fa-font"></i></label>
-            <input type="text" name="why" id="why" onkeyup='checkNotEmptyBlue(this.id);' required/>
+            <textarea name="why" id="why" onkeyup='checkNotEmptyBlue(this.id);' required></textarea>
             <br><br>
 
-            <h3>Please upload your Resume/CV</h3>
+            <h3>Please upload your Resume/CV.</h3>
             <label id="iconcv" for="cv"><i class="fas fa-file"></i></label>
             <input type="file" name="cv" id="cv" onkeyup='checkNotEmptyBlue(this.id);' required/>
             <br><br>
 
-            <h3>Are you an employee of a non-profit organizaion?</h3>
+            <h3>Are you an employee of a non-profit organization?</h3>
             <input type="radio" value="yes" id="yesNPO" name="NPO" onkeyup='checkNotEmptyBlue(this.id);' required/>
             <label for="yesNPO" class="radio">Yes</label>
             <input type="radio" value="no" id="noNPO" name="NPO" checkedonkeyup='checkNotEmptyBlue(this.id);' required/>
             <label for="noNPO" class="radio">No</label>
             <br><br>
 
-            <h3>Do you have any special dietary or physical considerations of which we should be aware?.</h3>
-            <label id="iconspecial" for="special"><i class="fas fa-font"></i></label>
-            <input type="text" name="special" id="special" onkeyup='checkNotEmptyBlue(this.id);' required/>
+            <h3>Do you have any special dietary or physical considerations of which we should be aware?</h3>
+            <textarea name="special" id="special" onkeyup='checkNotEmptyBlue(this.id);' required></textarea>
         </div>
 
         <!--------------------------------------------------- Page 5 --------------------------------------------------->
@@ -816,7 +813,7 @@
             </div>
             <div>
                 <button type="button" id="nextBtn" onclick="nextPrev(1);">Next</button>
-            </div>
+            </div class="inline-input-block">
         </div>
         
         <!----------------------------------- Circles which indicates the steps of the form ----------------------------------->
@@ -903,6 +900,34 @@
             }
             //... and adds the "active" class to the current step:
             x[n].className += " active";
+        }
+
+        function checkHear() {
+            if (document.getElementById('hear').value == 'conf') {
+                document.getElementById('conference').type = "text";
+                document.getElementById('iconconference').style = "";
+                document.getElementById('otherC').type = "hidden";
+                document.getElementById('iconotherC').style = "display: none;";
+                document.getElementById('h3other').style = "display: none;";
+                document.getElementById('h3other2').style = "display: none;";
+                document.getElementById('h3other3').style = "display: none;";
+            } else if (document.getElementById('hear').value == 'other'){
+                document.getElementById('otherC').type = "text";
+                document.getElementById('iconotherC').style = "";
+                document.getElementById('h3other').style = "";
+                document.getElementById('h3other2').style = "";
+                document.getElementById('h3other3').style = "";
+                document.getElementById('conference').type = "hidden";
+                document.getElementById('iconconference').style = "display: none;";
+            } else {
+                document.getElementById('conference').type = "hidden";
+                document.getElementById('iconconference').style = "display: none;";
+                document.getElementById('otherC').type = "hidden";
+                document.getElementById('iconotherC').style = "display: none;";
+                document.getElementById('h3other').style = "display: none;";
+                document.getElementById('h3other2').style = "display: none;";
+                document.getElementById('h3other3').style = "display: none;";
+            }
         }
     </script>
 

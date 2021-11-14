@@ -226,12 +226,28 @@ select {
     color: rgb(117,117,117);
 }
 
-input:hover, select:hover {
+textarea {
+    width: calc(100% - 18px);
+    font-family: Bukra;
+    font-size: 16px;
+    height: 100px;
+    margin: 13px 0 0 -5px;
+    padding-left: 10px; 
+    border-radius: 5px;
+    border: solid 1px #cbc9c9; 
+    box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
+    background: #fff;
+    resize: vertical;
+    transform: translateX(5px);
+    outline: none;
+}
+
+input:hover, select:hover, textarea:hover {
     border: 1px solid transparent !important;
     box-shadow: 0 0 3px 0 black !important;
 }
 
-input:valid, select:valid {
+input:valid, select:valid, textarea:valid {
     border: 1px solid transparent;
     box-shadow: 0 0 3px 0 blue;
     color: blue;
@@ -261,10 +277,10 @@ input:valid, select:valid {
 }
 
 button {
-    width: 100%;
+    width: 95%;
     padding: 10px 0;
-    margin: 10px auto;
-    border-radius: 5px; 
+    margin: 10px 2.5%;
+    border-radius: 5px;
     border: none;
     background: blue; 
     font-size: 14px;
@@ -291,11 +307,11 @@ span {
     height: 15px;
     width: 15px;
     margin: 0 2px;
-    background-color: #bbbbbb;
+    background-color: red;
     border: none;
     border-radius: 50%;
     display: inline-block;
-    opacity: 0.5;
+    opacity: 0.3;
 }
   
 /* Mark the active step: */
@@ -305,5 +321,5 @@ span {
   
 /* Mark the steps that are finished and valid: */
 .step.finish {
-    background-color: #04AA6D;
+    background-color: blue;
 }
