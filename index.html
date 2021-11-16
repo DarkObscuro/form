@@ -13,90 +13,6 @@
     <script src="js/checkForm.js?version=1" type="text/javascript"></script>
   </head>
 
-    <datalist id="years">
-        <option value="1950">
-        <option value="1951">
-        <option value="1952">
-        <option value="1953">
-        <option value="1954">
-        <option value="1955">
-        <option value="1956">
-        <option value="1957">
-        <option value="1958">
-        <option value="1959">
-        <option value="1960">
-        <option value="1961">
-        <option value="1962">
-        <option value="1963">
-        <option value="1964">
-        <option value="1965">
-        <option value="1966">
-        <option value="1967">
-        <option value="1968">
-        <option value="1969">
-        <option value="1970">
-        <option value="1971">
-        <option value="1972">
-        <option value="1973">
-        <option value="1974">
-        <option value="1975">
-        <option value="1976">
-        <option value="1977">
-        <option value="1978">
-        <option value="1979">
-        <option value="1980">
-        <option value="1981">
-        <option value="1982">
-        <option value="1983">
-        <option value="1984">
-        <option value="1985">
-        <option value="1986">
-        <option value="1987">
-        <option value="1988">
-        <option value="1989">
-        <option value="1990">
-        <option value="1991">
-        <option value="1992">
-        <option value="1993">
-        <option value="1994">
-        <option value="1995">
-        <option value="1996">
-        <option value="1997">
-        <option value="1998">
-        <option value="1999">
-        <option value="2000">
-        <option value="2001">
-        <option value="2002">
-        <option value="2003">
-        <option value="2004">
-        <option value="2005">
-        <option value="2006">
-        <option value="2007">
-        <option value="2008">
-        <option value="2009">
-        <option value="2010">
-        <option value="2011">
-        <option value="2012">
-        <option value="2013">
-        <option value="2014">
-        <option value="2015">
-        <option value="2016">
-        <option value="2017">
-        <option value="2018">
-        <option value="2019">
-        <option value="2020">
-        <option value="2021">
-        <option value="2022">
-        <option value="2023">
-        <option value="2024">
-        <option value="2025">
-        <option value="2026">
-        <option value="2027">
-        <option value="2028">
-        <option value="2029">
-        <option value="2030">
-    </datalist>
-
     <datalist id="countries">
         <option value="Afghanistan">
         <option value="Åland Islands">
@@ -364,17 +280,6 @@
             <h2>Personal Contact</h2>
             <hr>
 
-            <!-- 
-            <label id="icontitle" for="title"><i class="fas fa-user"></i></label>      
-            <select id="title" name="title" class="form-control" onchange='checkNotEmptyBlue(this.id);' required>
-                <option value="" selected disabled>Please select title...</option>
-                <option value="Mr.">Mr.</option>
-                <option value="Mrs.">Mrs.</option>
-                <option value="Ms.">Ms.</option>
-                <option value="Dr.">Dr.</option>
-            </select> 
-            -->
-
             <div class="inline-input">
                 <div class="inline-input-block">
                     <h3>First Name</h3>
@@ -390,11 +295,6 @@
             </div>
             <br>
 
-            <!--             
-            <label id="iconpreferredname" for="preferredname"><i class="fas fa-user"></i></label>
-            <input type="text" name="preferredname" id="preferredname" placeholder="Preferred Name" onkeyup='checkNotEmptyBlue(this.id);' required> 
-            -->
-            
             <h3>Email</h3>
             <label id="iconemail" for="email"><i class="fas fa-envelope"></i></label>
             <input type="email" name="email" id="email" placeholder="Preferred Email" onkeyup='checkNotEmptyRed(this.id);' required/>
@@ -405,34 +305,9 @@
             <input type="text" name="streetaddress" id="streetaddress" placeholder="Street Address" onkeyup='checkNotEmptyRed(this.id);' required/>
             <br><br>
 
-            <!--             
-            <label id="iconaddress2" for="address2"><i class="fas fa-globe"></i></label>
-            <input type="text" name="address2" id="address2" placeholder="Address Line 2" onkeyup='checkNotEmptyBlue(this.id);' required/> 
-            -->
-            
             <h3>City</h3>
             <label id="iconcity" for="city"><i class="fas fa-globe"></i></label>
             <input type="text" name="city" id="city" placeholder="City" onkeyup='checkNotEmptyRed(this.id);' required/>
-                
-            <!-- 
-            <div class="inline-input-block">
-                <label id="iconregion" for="region"><i class="fas fa-globe"></i></label>
-                <input type="text" name="region" id="region" placeholder="State / Province / Region" onkeyup='checkNotEmptyRed(this.id);' required/>     
-            </div> 
-
-            <div class="inline-input">
-                <div class="inline-input-block">
-                    <label id="iconpostal" for="postal"><i class="fas fa-globe"></i></label>
-                    <input type="text" name="postal" id="postal" placeholder="Postal / Zip Code" onkeyup='checkNotEmptyRed(this.id);' required/>
-                </div>
-                
-                <div class="inline-input-block">
-                    <label id="iconcountry" for="country"><i class="fas fa-globe"></i></label>      
-                    <input type="text" name="country" id="country" list="countries" placeholder="Country" onkeyup='checkNotEmptyRed(this.id);' required>
-                </div>
-            </div>
-
-            -->
 
             <hr>
 
@@ -446,17 +321,10 @@
             <input type="date" name="dob" id="dob" placeholder="Date of Birth" onkeyup='checkNotEmptyRed(this.id);' required/>
             <br><br>
 
-            <!-- <label id="iconhomephone" for="homephone"><i class="fas fa-phone"></i></label>
-            <input type="text" name="homephone" id="homephone" placeholder="Home Phone Number   (###) ###-####" onkeyup='checkNotEmptyBlue(this.id);' required/> -->
-
             <h3>Mobile Phone Number   (###) ###-####</h3>
             <label id="iconmobilephone" for="mobilephone"><i class="fas fa-phone"></i></label>
             <input type="text" name="mobilephone" id="mobilephone" placeholder="Phone Number" onkeyup='checkNotEmptyRed(this.id);' required/>
             <br><br>
-
-            <!-- <label id="iconinterphone" for="interphone"><i class="fas fa-phone"></i></label>
-            <input type="text" name="interphone" id="interphone" placeholder="International Phone Number" onkeyup='checkNotEmptyBlue(this.id);' required/> -->
-
         </div>
 
         <!--------------------------------------------------- Page 2 --------------------------------------------------->
@@ -477,238 +345,9 @@
             <label id="icondivision" for="division"><i class="fas fa-user"></i></label>
             <input type="text" name="division" id="division" placeholder="Division / Branch" onkeyup='checkNotEmptyRed(this.id);' required>
             <br><br>
-
-            <!-- <hr>
-            <h3>Work Address</h3>
-
-            <label id="iconworkstreetaddress" for="workstreetaddress"><i class="fas fa-globe"></i></label>
-            <input type="text" name="workstreetaddress" id="workstreetaddress" placeholder="Street Address" onkeyup='checkNotEmptyRed(this.id);' required>
-
-            <label id="iconworkaddress2" for="workaddress2"><i class="fas fa-globe"></i></label>
-            <input type="text" name="workaddress2" id="workaddress2" placeholder="Address Line 2" onkeyup='checkNotEmptyBlue(this.id);' required>
-
-            <div class="inline-input">
-                <div class="inline-input-block">
-                    <label id="iconworkcity" for="workcity"><i class="fas fa-globe"></i></label>
-                    <input type="text" name="workcity" id="workcity" placeholder="City" onkeyup='checkNotEmptyRed(this.id);' required/>
-                </div>
-                
-                <div class="inline-input-block">
-                    <label id="iconworkstate" for="workstate"><i class="fas fa-globe"></i></label>
-                    <input type="text" name="workstate" id="workstate" placeholder="State / Province / Region" onkeyup='checkNotEmptyRed(this.id);' required/>     
-                </div>
-            </div>
-
-            <div class="inline-input">
-                <div class="inline-input-block">
-                    <label id="iconworkpostal" for="workpostal"><i class="fas fa-globe"></i></label>
-                    <input type="text" name="workpostal" id="workpostal" placeholder="Postal / Zip Code" onkeyup='checkNotEmptyRed(this.id);' required/>
-                </div>
-                
-                <div class="inline-input-block">
-                    <label id="iconworkcountry" for="workcountry"><i class="fas fa-globe"></i></label>      
-                    <input type="text" name="workcountry" id="workcountry" list="countries" placeholder="Country" onkeyup='checkNotEmptyRed(this.id);' required>
-                </div>
-            </div>
-            <hr>
-
-            <label id="iconworkhomephone" for="workhomephone"><i class="fas fa-phone"></i></label>
-            <input type="text" name="workhomephone" id="workhomephone" placeholder="Work Phone Number   (###) ###-####" onkeyup='checkNotEmptyBlue(this.id);' required/>
-
-            <label id="iconworkmobilephone" for="workmobilephone"><i class="fas fa-phone"></i></label>
-            <input type="text" name="workmobilephone" id="workmobilephone" placeholder="Work Mobile Number   (###) ###-####" onkeyup='checkNotEmptyRed(this.id);' required/>
-
-            <label id="iconworkemail" for="workemail"><i class="fas fa-envelope"></i></label>
-            <input type="email" name="workemail" id="workemail" placeholder="Work Email" onkeyup='checkNotEmptyRed(this.id);' required/>
-
-        </div>
-
-        ------------------------------------------------- Page 3 ---------------------------------------------------
-        <div class="tab">
-            <h2>Educational</h2>
-            <hr>
-
-            <h3>Formation 1</h3>
-            <label id="iconuni1" for="uni1"><i class="fas fa-user-graduate"></i></label>
-            <input type="text" name="uni1" id="uni1" placeholder="College/University" onkeyup='checkNotEmptyRed(this.id);' required/>
-
-            <label id="icondegree1" for="degree1"><i class="fas fa-user-graduate"></i></label>
-            <input type="text" name="degree1" id="degree1" placeholder="Degree Received (Abbreviations OK)" onkeyup='checkNotEmptyRed(this.id);' required/>
-
-            <div class="inline-input">
-                <div class="inline-input-block">
-                    <label id="iconmonthfrom1" for="monthfrom1"><i class="fas fa-calendar"></i></label>
-                    <select id="monthfrom1" name="monthfrom1" class="form-control" onchange='checkNotEmptyRed(this.id);' required>
-                        <option value="" selected disabled>From month</option>
-                        <option value="January">January</option>
-                        <option value="February">February</option>
-                        <option value="March">March</option>
-                        <option value="April">April</option>
-                        <option value="May">May</option>
-                        <option value="June">June</option>
-                        <option value="July">July</option>
-                        <option value="August">August</option>
-                        <option value="September">September</option>
-                        <option value="October">October</option>
-                        <option value="November">November</option>
-                        <option value="December">December</option>
-                    </select>
-                </div>
-                
-                <div class="inline-input-block">
-                    <label id="iconyearfrom1" for="yearfrom1"><i class="fas fa-calendar"></i></label>
-                    <input type="number" name="yearfrom1" id="yearfrom1" list="years" placeholder="From year" onkeyup='checkNotEmptyRed(this.id);' required/>     
-                </div>
-            </div>
-
-            <div class="inline-input">
-                <div class="inline-input-block">
-                    <label id="iconmonthto1" for="monthto1"><i class="fas fa-calendar"></i></label>
-                    <select id="monthto1" name="monthto1" class="form-control" onchange='checkNotEmptyRed(this.id);' required>
-                        <option value="" selected disabled>To month</option>
-                        <option value="January">January</option>
-                        <option value="February">February</option>
-                        <option value="March">March</option>
-                        <option value="April">April</option>
-                        <option value="May">May</option>
-                        <option value="June">June</option>
-                        <option value="July">July</option>
-                        <option value="August">August</option>
-                        <option value="September">September</option>
-                        <option value="October">October</option>
-                        <option value="November">November</option>
-                        <option value="December">December</option>
-                    </select>
-                </div>
-                
-                <div class="inline-input-block">
-                    <label id="iconyearto1" for="yearto1"><i class="fas fa-calendar"></i></label>
-                    <input type="number" name="yearto1" id="yearto1" list="years" placeholder="To year" onkeyup='checkNotEmptyRed(this.id);' required/>     
-                </div>
-            </div>
-            <hr>
-
-            <h3>Formation 2</h3>
-            <label id="iconuni2" for="uni2"><i class="fas fa-user-graduate"></i></label>
-            <input type="text" name="uni2" id="uni2" placeholder="College/University" onkeyup='checkNotEmptyBlue(this.id);' required/>
-
-            <label id="icondegree2" for="degree2"><i class="fas fa-user-graduate"></i></label>
-            <input type="text" name="degree2" id="degree2" placeholder="Degree Received (Abbreviations OK)" onkeyup='checkNotEmptyBlue(this.id);' required/>
-
-            <div class="inline-input">
-                <div class="inline-input-block">
-                    <label id="iconmonthfrom2" for="monthfrom2"><i class="fas fa-calendar"></i></label>
-                    <select id="monthfrom2" name="monthfrom2" class="form-control" onchange='checkNotEmptyBlue(this.id);' required>
-                        <option value="" selected disabled>From month</option>
-                        <option value="January">January</option>
-                        <option value="February">February</option>
-                        <option value="March">March</option>
-                        <option value="April">April</option>
-                        <option value="May">May</option>
-                        <option value="June">June</option>
-                        <option value="July">July</option>
-                        <option value="August">August</option>
-                        <option value="September">September</option>
-                        <option value="October">October</option>
-                        <option value="November">November</option>
-                        <option value="December">December</option>
-                    </select>
-                </div>
-                
-                <div class="inline-input-block">
-                    <label id="iconyearfrom2" for="yearfrom2"><i class="fas fa-calendar"></i></label>
-                    <input type="number" name="yearfrom2" id="yearfrom2" list="years" placeholder="From year" onkeyup='checkNotEmptyBlue(this.id);' required/>     
-                </div>
-            </div>
-
-            <div class="inline-input">
-                <div class="inline-input-block">
-                    <label id="iconmonthto2" for="monthto2"><i class="fas fa-calendar"></i></label>
-                    <select id="monthto2" name="monthto2" class="form-control" onchange='checkNotEmptyBlue(this.id);' required>
-                        <option value="" selected disabled>To month</option>
-                        <option value="January">January</option>
-                        <option value="February">February</option>
-                        <option value="March">March</option>
-                        <option value="April">April</option>
-                        <option value="May">May</option>
-                        <option value="June">June</option>
-                        <option value="July">July</option>
-                        <option value="August">August</option>
-                        <option value="September">September</option>
-                        <option value="October">October</option>
-                        <option value="November">November</option>
-                        <option value="December">December</option>
-                    </select>
-                </div>
-                
-                <div class="inline-input-block">
-                    <label id="iconyearto2" for="yearto2"><i class="fas fa-calendar"></i></label>
-                    <input type="number" name="yearto2" id="yearto2" list="years" placeholder="To year" onkeyup='checkNotEmptyBlue(this.id);' required/>     
-                </div>
-            </div>
-            <hr>
-
-            <h3>Formation 3</h3>
-            <label id="iconuni3" for="uni3"><i class="fas fa-user-graduate"></i></label>
-            <input type="text" name="uni3" id="uni3" placeholder="College/University" onkeyup='checkNotEmptyBlue(this.id);' required/>
-
-            <label id="icondegree3" for="degree3"><i class="fas fa-user-graduate"></i></label>
-            <input type="text" name="degree3" id="degree3" placeholder="Degree Received (Abbreviations OK)" onkeyup='checkNotEmptyBlue(this.id);' required/>
-
-            <div class="inline-input">
-                <div class="inline-input-block">
-                    <label id="iconmonthfrom3" for="monthfrom3"><i class="fas fa-calendar"></i></label>
-                    <select id="monthfrom3" name="monthfrom3" class="form-control" onchange='checkNotEmptyBlue(this.id);' required>
-                        <option value="" selected disabled>From month</option>
-                        <option value="January">January</option>
-                        <option value="February">February</option>
-                        <option value="March">March</option>
-                        <option value="April">April</option>
-                        <option value="May">May</option>
-                        <option value="June">June</option>
-                        <option value="July">July</option>
-                        <option value="August">August</option>
-                        <option value="September">September</option>
-                        <option value="October">October</option>
-                        <option value="November">November</option>
-                        <option value="December">December</option>
-                    </select>
-                </div>
-                
-                <div class="inline-input-block">
-                    <label id="iconyearfrom3" for="yearfrom3"><i class="fas fa-calendar"></i></label>
-                    <input type="number" name="yearfrom3" id="yearfrom3" list="years" placeholder="From year" onkeyup='checkNotEmptyBlue(this.id);' required/>     
-                </div>
-            </div>
-
-            <div class="inline-input">
-                <div class="inline-input-block">
-                    <label id="iconmonthto3" for="monthto3"><i class="fas fa-calendar"></i></label>
-                    <select id="monthto3" name="monthto3" class="form-control" onchange='checkNotEmptyBlue(this.id);' required>
-                        <option value="" selected disabled>To month</option>
-                        <option value="January">January</option>
-                        <option value="February">February</option>
-                        <option value="March">March</option>
-                        <option value="April">April</option>
-                        <option value="May">May</option>
-                        <option value="June">June</option>
-                        <option value="July">July</option>
-                        <option value="August">August</option>
-                        <option value="September">September</option>
-                        <option value="October">October</option>
-                        <option value="November">November</option>
-                        <option value="December">December</option>
-                    </select>
-                </div>
-                
-                <div class="inline-input-block">
-                    <label id="iconyearto3" for="yearto3"><i class="fas fa-calendar"></i></label>
-                    <input type="number" name="yearto3" id="yearto3" list="years" placeholder="To year" onkeyup='checkNotEmptyBlue(this.id);' required/>      
-                </div>
-            </div> -->
         </div> 
 
-        <!--------------------------------------------------- Page 4 --------------------------------------------------->
+        <!--------------------------------------------------- Page 3 --------------------------------------------------->
         <div class="tab">
             <h2>Questionnaire</h2>
             <hr>
@@ -739,92 +378,14 @@
             <input type="hidden" name="otherC" id="otherC" onkeyup='checkNotEmptyBlue(this.id);' placeholder="Other" required/>
             <br id="h3other2" style="display: none;"><br id="h3other3" style="display: none;">
 
-            <!-- <h3>Please describe your work responsabilities and professional experience.</h3>
-            <textarea name="experience" id="experience" onkeyup='checkNotEmptyBlue(this.id);' required></textarea>
-            <br><br> -->
-
             <h3>Please indicate why you wish to attend this certificate program and how you feel this program will be beneficial to you.</h3>
             <textarea name="why" id="why" onkeyup='checkNotEmptyBlue(this.id);' required></textarea>
             <br><br>
-
-            <!-- <h3>Please upload your Resume/CV.</h3>
-            <label id="iconcv" for="cv"><i class="fas fa-file"></i></label>
-            <input type="file" name="cv" id="cv" onkeyup='checkNotEmptyBlue(this.id);' required/>
-            <br><br>
-
-            <h3>Are you an employee of a non-profit organization?</h3>
-            <input type="radio" value="yes" id="yesNPO" name="NPO" onkeyup='checkNotEmptyBlue(this.id);' required/>
-            <label for="yesNPO" class="radio">Yes</label>
-            <input type="radio" value="no" id="noNPO" name="NPO" checkedonkeyup='checkNotEmptyBlue(this.id);' required/>
-            <label for="noNPO" class="radio">No</label>
-            <br><br> -->
 
             <h3>Do you have any special dietary or physical considerations of which we should be aware?</h3>
             <textarea name="special" id="special" onkeyup='checkNotEmptyBlue(this.id);' required></textarea>
             <br><br>
         </div>
-
-        <!--------------------------------------------------- Page 5 --------------------------------------------------->
-        <!-- <div class="tab">
-            <h2>Billing Information</h2>
-            <hr>
-
-            <h3>Will you be paying by check or credit</h3>
-            <input type="radio" value="credit" id="credit" name="pay" checkedonkeyup='y();' required/>
-            <label for="credit" class="radio">I will be paying online with a credit card</label>
-            <input type="radio" value="check" id="check" name="pay" onkeyup='checkNotEmptyBlue(this.id);' required/>
-            <label for="check" class="radio">I will be paying by check or EFT</label>
-            <br><br>
-
-            <h3>Billing Contact Name</h3>
-            <div class="inline-input">
-                <div class="inline-input-block">
-                    <label id="iconbillfirstname" for="billfirstname"><i class="fas fa-user"></i></label>
-                    <input type="text" name="billfirstname" id="billfirstname" placeholder="First" onkeyup='checkNotEmptyBlue(this.id);' required/>
-                </div>
-                
-                <div class="inline-input-block">
-                    <label id="iconbilllastname" for="billlastname"><i class="fas fa-user"></i></label>
-                    <input type="text" name="billlastname" id="billlastname" placeholder="Last" onkeyup='checkNotEmptyBlue(this.id);' required/>     
-                </div>
-            </div>
-
-            <label id="iconbillemail" for="billemail"><i class="fas fa-user"></i></label>
-            <input type="email" name="billemail" id="billemail" placeholder="Billing Contact Email" onkeyup='checkNotEmptyBlue(this.id);' required/>
-
-            <hr>
-            <h3>Billing Address</h3>
-
-            <label id="iconbillstreetaddress" for="billstreetaddress"><i class="fas fa-globe"></i></label>
-            <input type="text" name="billstreetaddress" id="billstreetaddress" placeholder="Street Address" onkeyup='checkNotEmptyBlue(this.id);' required/>
-
-            <label id="iconbilladdress2" for="billaddress2"><i class="fas fa-globe"></i></label>
-            <input type="text" name="billaddress2" id="billaddress2" placeholder="Address Line 2" onkeyup='checkNotEmptyBlue(this.id);' required/>
-
-            <div class="inline-input">
-                <div class="inline-input-block">
-                    <label id="iconbillcity" for="billcity"><i class="fas fa-globe"></i></label>
-                    <input type="text" name="billcity" id="billcity" placeholder="City" onkeyup='checkNotEmptyBlue(this.id);' required/>
-                </div>
-                
-                <div class="inline-input-block">
-                    <label id="iconbillstate" for="billstate"><i class="fas fa-globe"></i></label>
-                    <input type="text" name="billstate" id="billstate" placeholder="State / Province / Region" onkeyup='checkNotEmptyBlue(this.id);' required/>     
-                </div>
-            </div>
-
-            <div class="inline-input">
-                <div class="inline-input-block">
-                    <label id="iconbillpostal" for="billpostal"><i class="fas fa-globe"></i></label>
-                    <input type="text" name="billpostal" id="billpostal" placeholder="Postal / Zip Code" onkeyup='checkNotEmptyBlue(this.id);' required/>
-                </div>
-                
-                <div class="inline-input-block">
-                    <label id="iconbillcountry" for="billcountry"><i class="fas fa-globe"></i></label>      
-                    <input type="text" name="billcountry" id="billcountry" list="countries" placeholder="Country" onkeyup='checkNotEmptyBlue(this.id);' required>
-                </div>
-            </div>
-        </div> -->
 
         <hr>
         <p id="comments"></p>
@@ -949,6 +510,5 @@
             }
         }
     </script>
-
   </body>
 </html>

@@ -55,7 +55,7 @@
             $job_title = checkEmpty($conn,'jobtitle');
             $division = checkEmpty($conn,'division'); 
             
-            // Page 4
+            // Page 3
             $hear = checkEmpty($conn,'hear');
             $conference = checkEmpty($conn,'conference');
             $otherC = checkEmpty($conn,'otherC');
