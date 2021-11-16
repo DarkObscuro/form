@@ -377,35 +377,40 @@
 
             <div class="inline-input">
                 <div class="inline-input-block">
+                    <h3>First Name</h3>
                     <label id="iconfirstname" for="firstname"><i class="fas fa-user"></i></label>
                     <input type="text" name="firstname" id="firstname" placeholder="First Name" onkeyup='checkNotEmptyRed(this.id);' required/>
                 </div>
                 
                 <div class="inline-input-block">
+                    <h3>Last Name</h3>
                     <label id="iconlastname" for="lastname"><i class="fas fa-user"></i></label>
                     <input type="text" name="lastname" id="lastname" placeholder="Last Name" onkeyup='checkNotEmptyRed(this.id);' required/>     
                 </div>
             </div>
+            <br>
 
             <!--             
             <label id="iconpreferredname" for="preferredname"><i class="fas fa-user"></i></label>
             <input type="text" name="preferredname" id="preferredname" placeholder="Preferred Name" onkeyup='checkNotEmptyBlue(this.id);' required> 
             -->
             
+            <h3>Email</h3>
             <label id="iconemail" for="email"><i class="fas fa-envelope"></i></label>
             <input type="email" name="email" id="email" placeholder="Preferred Email" onkeyup='checkNotEmptyRed(this.id);' required/>
             
             <hr>
-            <h3>Home Address</h3>
-
+            <h3>Home Street Address</h3>
             <label id="iconstreetaddress" for="streetaddress"><i class="fas fa-globe"></i></label>
             <input type="text" name="streetaddress" id="streetaddress" placeholder="Street Address" onkeyup='checkNotEmptyRed(this.id);' required/>
+            <br><br>
 
             <!--             
             <label id="iconaddress2" for="address2"><i class="fas fa-globe"></i></label>
             <input type="text" name="address2" id="address2" placeholder="Address Line 2" onkeyup='checkNotEmptyBlue(this.id);' required/> 
             -->
             
+            <h3>City</h3>
             <label id="iconcity" for="city"><i class="fas fa-globe"></i></label>
             <input type="text" name="city" id="city" placeholder="City" onkeyup='checkNotEmptyRed(this.id);' required/>
                 
@@ -431,17 +436,23 @@
 
             <hr>
 
+            <h3>Citizenship</h3>
             <label id="iconcitizenship" for="citizenship"><i class="fas fa-globe"></i></label>      
             <input type="text" name="citizenship" id="citizenship" list="countries" placeholder="Citizenship" onkeyup='checkNotEmptyRed(this.id);' required>
+            <br><br>
             
+            <h3>Date of Birth (mm/dd/yyyy)</h3>
             <label id="icondob" for="dob"><i class="fas fa-calendar"></i></label>
             <input type="date" name="dob" id="dob" placeholder="Date of Birth" onkeyup='checkNotEmptyRed(this.id);' required/>
+            <br><br>
 
             <!-- <label id="iconhomephone" for="homephone"><i class="fas fa-phone"></i></label>
             <input type="text" name="homephone" id="homephone" placeholder="Home Phone Number   (###) ###-####" onkeyup='checkNotEmptyBlue(this.id);' required/> -->
 
+            <h3>Mobile Phone Number   (###) ###-####</h3>
             <label id="iconmobilephone" for="mobilephone"><i class="fas fa-phone"></i></label>
-            <input type="text" name="mobilephone" id="mobilephone" placeholder="Mobile Phone Number   (###) ###-####" onkeyup='checkNotEmptyRed(this.id);' required/>
+            <input type="text" name="mobilephone" id="mobilephone" placeholder="Phone Number" onkeyup='checkNotEmptyRed(this.id);' required/>
+            <br><br>
 
             <!-- <label id="iconinterphone" for="interphone"><i class="fas fa-phone"></i></label>
             <input type="text" name="interphone" id="interphone" placeholder="International Phone Number" onkeyup='checkNotEmptyBlue(this.id);' required/> -->
@@ -452,14 +463,20 @@
         <div class="tab">
             <h2>Work Contact Information</h2>
             <hr>
+            <h3>Employer</h3>
             <label id="iconemployer" for="employer"><i class="fas fa-user"></i></label>
             <input type="text" name="employer" id="employer" placeholder="Employer" onkeyup='checkNotEmptyRed(this.id);' required>
+            <br><br>
 
+            <h3>Job Title</h3>
             <label id="iconjobtitle" for="jobtitle"><i class="fas fa-user"></i></label>
             <input type="text" name="jobtitle" id="jobtitle" placeholder="Job Title" onkeyup='checkNotEmptyRed(this.id);' required>
+            <br><br>
 
+            <h3>Division / Branch</h3>
             <label id="icondivision" for="division"><i class="fas fa-user"></i></label>
             <input type="text" name="division" id="division" placeholder="Division / Branch" onkeyup='checkNotEmptyRed(this.id);' required>
+            <br><br>
 
             <!-- <hr>
             <h3>Work Address</h3>
@@ -744,6 +761,7 @@
 
             <h3>Do you have any special dietary or physical considerations of which we should be aware?</h3>
             <textarea name="special" id="special" onkeyup='checkNotEmptyBlue(this.id);' required></textarea>
+            <br><br>
         </div>
 
         <!--------------------------------------------------- Page 5 --------------------------------------------------->
