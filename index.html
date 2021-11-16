@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css?version=8">
-    <script src="js/phoneFields.js?version=1" type="text/javascript"></script>
-    <script src="js/checkField.js?version=1" type="text/javascript"></script>
-    <script src="js/checkForm.js?version=1" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/style.css" id="theme-link-css">
+    <script src="js/phoneFields.js" type="text/javascript"></script>
+    <script src="js/checkField.js" type="text/javascript"></script>
+    <script src="js/checkForm.js" type="text/javascript"></script>
   </head>
 
     <datalist id="countries">
@@ -265,11 +265,14 @@
         <h1>CISO Program</h1>
     </div>
 
+    <p class="dark-btn">
+        <button class="btn-toggle" style="width: 20%;">Toggle Dark-Mode <i class="fas fa-moon"></i></button>
+    </p>
     <p>
        The fields marked in <span style="color: #ff0000">red are required</span>.
     </p>
     <p>
-       You will not be able to move to the next page until all required fields are filled. 
+       You will not be able to move to the next page until all required fields are filled.
     </p>
     
     <div class="main-block">
@@ -396,7 +399,7 @@
                 <button type="button" id="prevBtn" onclick="nextPrev(-1);">Previous</button>
             </div>
             <div>
-                <button type="button" id="nextBtn" onclick="nextPrev(1);">Next</button>
+                <button type="button" id="nextBtn" onclick="nextPrev(1); checkAllFields();">Next</button>
             </div class="inline-input-block">
         </div>
         
@@ -414,6 +417,7 @@
     <script>
         var currentTab = 0; // Current tab is set to be the first tab (0)
         showTab(currentTab); // Display the current tab
+        
 
         var checkFormFilled = function(n) {
             if (n == 0) {
@@ -509,6 +513,26 @@
                 document.getElementById('h3other3').style = "display: none;";
             }
         }
+
+        // Select the button
+        const btn = document.querySelector(".btn-toggle");
+        // Select the stylesheet <link>
+        const themeCSS = document.querySelector("#theme-link-css");
+
+        // Listen for a click on the button
+        btn.addEventListener("click", function() {
+        // If the current URL contains "ligh-theme.css"
+        if (themeCSS.getAttribute("href") == "css/style.css") {
+            // ... then switch it to "dark-theme.css"
+            themeCSS.href = "css/darkstyle.css";
+
+        // Otherwise...
+        } else {
+            // ... switch it to "light-theme.css"
+            themeCSS.href = "css/style.css";
+        }
+        checkAllFields();
+        });
     </script>
   </body>
 </html>

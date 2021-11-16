@@ -1,4 +1,4 @@
-var checkNotEmptyBlue = function(id) {
+var checkNotEmptyBlueLight = function(id) {
     var elem = document.getElementById(id);
     if (elem.value) {
         elem.style.border = '1px solid transparent';
@@ -9,16 +9,84 @@ var checkNotEmptyBlue = function(id) {
     }
 }
 
-var checkNotEmptyRed = function(id) {
+var checkNotEmptyRedLight = function(id) {
     var elem = document.getElementById(id);
     var labelicon = document.getElementById('icon' + id);
     if (elem.value) {
         elem.style.border = '1px solid transparent';
         elem.style.boxShadow = '0 0 3px 0 blue';
+        elem.style.background = '#fff';
         labelicon.style.background = 'blue';
     } else {
         elem.style.border = '1px solid transparent';
         elem.style.boxShadow = '0 0 3px 0 red';
+        elem.style.background = '#fff';
         labelicon.style.background = 'red';
+    }
+}
+
+var checkNotEmptyBlueDark = function(id) {
+    var elem = document.getElementById(id);
+    if (elem.value) {
+        elem.style.border = '1px solid transparent';
+        elem.style.boxShadow = '0 0 3px 0 #0077ff';
+    } else {
+        elem.style.border = '1px solid #cbc9c9';
+        elem.style.boxShadow = '1px 2px 5px rgba(0,0,0,.09)';
+    }
+}
+
+var checkNotEmptyRedDark = function(id) {
+    var elem = document.getElementById(id);
+    var labelicon = document.getElementById('icon' + id);
+    if (elem.value) {
+        elem.style.border = '1px solid transparent';
+        elem.style.boxShadow = '0 0 3px 0 #0077ff';
+        elem.style.background = '#050032'
+        labelicon.style.background = '#0077ff';
+    } else {
+        elem.style.border = '1px solid transparent';
+        elem.style.boxShadow = '0 0 3px 0 red';
+        elem.style.background = '#320000';
+        labelicon.style.background = 'red';
+    }
+}
+
+
+var checkNotEmptyBlue = function(id) {
+    const themeCSS = document.querySelector("#theme-link-css");;
+    if (themeCSS.getAttribute("href") == "css/style.css") {
+        // ... then switch it to "dark-theme.css"
+        checkNotEmptyBlueLight(id);
+
+    // Otherwise...
+    } else {
+        // ... switch it to "light-theme.css"
+        checkNotEmptyBlueDark(id);
+    }
+}
+
+var checkNotEmptyRed = function(id) {
+    const themeCSS = document.querySelector("#theme-link-css");;
+    if (themeCSS.getAttribute("href") == "css/style.css") {
+        // ... then switch it to "dark-theme.css"
+        checkNotEmptyRedLight(id);
+
+    // Otherwise...
+    } else {
+        // ... switch it to "light-theme.css"
+        checkNotEmptyRedDark(id);
+    }
+}
+
+var checkAllFields = function() {
+    var fields = document.getElementsByTagName("input");
+    for (let i = 0; i < fields.length; i++) {
+        var id = fields[i].id;
+        if (fields[i].getAttribute("onkeyup") == 'checkNotEmptyBlue(this.id);') {
+            checkNotEmptyBlue(id);
+        } else {
+            checkNotEmptyRed(id);
+        }
     }
 }
