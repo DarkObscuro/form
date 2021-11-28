@@ -298,7 +298,7 @@
 
             <h3>Email</h3>
             <label id="iconemail" for="email"><i class="fas fa-envelope"></i></label>
-            <input type="email" name="email" id="email" placeholder="Preferred Email" onkeyup='checkNotEmptyRed(this.id);' required/>
+            <input type="text" name="email" id="email" placeholder="Preferred Email" onkeyup='checkNotEmptyRed(this.id);' required/>
             
             <hr>
             <h3>Home Street Address</h3>
@@ -468,10 +468,11 @@
         function validateForm() {
             // This function deals with validation of the form fields
             // If the valid status is true, mark the step as finished and valid:
-            if (checkFormFilled(currentTab)) {
+            res = checkFormFilled(currentTab);
+            if (res) {
                 document.getElementsByClassName("step")[currentTab].className += " finish";
             }
-            return checkFormFilled(currentTab); // return the valid status
+            return res; // return the valid status
         }
 
         function fixStepIndicator(n) {

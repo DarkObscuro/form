@@ -105,7 +105,7 @@ hr {
 
 .main-block {
     max-width: 70%;
-    min-height: 70%;
+    min-height: 50%;
     padding: 10px 30px;
     margin: 2% 20% 10% 20%;
     border-radius: 5px;
