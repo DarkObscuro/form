@@ -85,6 +85,8 @@ var checkAllFields = function() {
         var id = fields[i].id;
         if (fields[i].getAttribute("onkeyup") == 'checkNotEmptyBlue(this.id);') {
             checkNotEmptyBlue(id);
+        } else if (id == "email") {
+            checkMail(id);
         } else {
             checkNotEmptyRed(id);
         }
