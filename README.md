@@ -5,7 +5,7 @@ The destination database can be changed according to the need.
 The repository contains several folders:
 
 ## CSS
-Folder that contains the 2 style sheets:
+Folder that contains 2 style sheets:
 - **style.css** for the **light theme**
 - **darkstyle.css** for the **dark theme**
 
@@ -26,7 +26,7 @@ Folder that contains the insert.php file used to send data received from the for
 
 ## Extra files
 
-* .GITIGNORE
+* .gitignore
 * README.md
 
 And finally, here is the home page that you want to open first:
