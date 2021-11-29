@@ -2,33 +2,35 @@
 Form that will be used as a template for a basic registration system, that sends data to a local server.
 The destination database can be changed according to the need.
 
-The repository contrains several folder:
- ## CSS Folder
+The repository contains several folders:
+ ## CSS
  Folder that contains the 2 style sheets:
     - style.css for the light theme
     - darkstyle.css for the dark theme
 
- ## FONT Folder
+ ## FONT
  Folder that contains the extra fonts used in this form
 
- ## IMAGE Folder
+ ## IMAGE
  Folder that contains the icon and some extra images
 
- ## JS Folder
+ ## JS
  Folder that contains all the JavaScript files of the project. There are three at the moment:
     - checkField.js that manages the color upon completion of fields
     - checkForm.js that allows to swap between pages if the current page has been completed
     - phoneFields.js that manages the phone number input mask
 
- ## PHP Folder
+ ## PHP
  Folder that contains the insert.php file used to send data received from the form to the database
 
 You will then file the usual files:
 
  ### .GITIGNORE
  ### README.md
-
- # INDEX.HTML
+ 
+ And finally, here is the home page that you want to open first:
+ 
+ ## INDEX.HTML
  HTML file that contains the major part of the form
 
 
