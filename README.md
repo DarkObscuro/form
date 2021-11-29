@@ -26,8 +26,8 @@ Folder that contains the insert.php file used to send data received from the for
 
 ## Extra files
 
-.GITIGNORE
-README.md
+* .GITIGNORE
+* README.md
 
 And finally, here is the home page that you want to open first:
 
