@@ -219,6 +219,10 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
 
+input::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
 select {
     width: calc(100% - 45px);
     font-family: Bukra;

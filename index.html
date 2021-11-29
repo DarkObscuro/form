@@ -274,7 +274,7 @@
     </p>
     
     <div class="main-block">
-        <form action="php/insert.php" id="regForm" method="post">
+        <form action="php/insert.php" id="regForm" method="post" autocomplete="off">
 
         <!--------------------------------------------------- Page 1 --------------------------------------------------->
         <div class="tab">
@@ -308,7 +308,7 @@
 
             <h3>City</h3>
             <label id="iconcity" for="city"><i class="fas fa-globe"></i></label>
-            <input type="text" name="city" id="city" placeholder="City" onkeyup='checkNotEmptyRed(this.id);' required/>
+            <input type="text" name="city" id="city" placeholder="City" onkeyup='checkNotEmptyRed(this.id);' autocomplete="off" required/>
 
             <hr>
 

@@ -4,13 +4,11 @@
         <title>CISO Registration</title>
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/darkstyle.css">
     </head> 
   
-    <body> 
-    <div class="header">
-        <h1>CISO Program</h1>
-    </div>
+    <body>
+    <h1>CISO Program</h1>
 
     <div class="main-block">
         <h2>Thank you</h2>
@@ -27,8 +25,14 @@
             }
             
             function checkEmpty($con,$elem) {
-                if (isset($_REQUEST[$elem])) {
-                    return mysqli_real_escape_string($con,$_REQUEST[$elem]);
+                if (isset($_POST[$elem]) && !empty($_POST[$elem])) {
+                    return mysqli_real_escape_string($con,$_POST[$elem]);
+                }
+            }
+
+            function setEmpty($con,$elem) {
+                if (isset($_POST[$elem]) && !empty($_POST[$elem])) {
+                    return mysqli_real_escape_string($con,$_POST[$elem]);
                 } else {
                     return mysqli_real_escape_string($con,"");
                 }
@@ -56,11 +60,11 @@
             $division = checkEmpty($conn,'division'); 
             
             // Page 3
-            $hear = checkEmpty($conn,'hear');
-            $conference = checkEmpty($conn,'conference');
-            $otherC = checkEmpty($conn,'otherC');
-            $why = checkEmpty($conn,'why');
-            $special = checkEmpty($conn,'special');
+            $hear = setEmpty($conn,'hear');
+            $conference = setEmpty($conn,'conference');
+            $otherC = setEmpty($conn,'otherC');
+            $why = setEmpty($conn,'why');
+            $special = setEmpty($conn,'special');
 
             $stmt->execute();
             echo "<h3>Your registration is complete.</h3>";
