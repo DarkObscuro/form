@@ -23,13 +23,13 @@ The repository contains several folders:
  ## PHP
  Folder that contains the insert.php file used to send data received from the form to the database
 
-You will then file the usual files:
+You will then find the usual files:
 
  ### .GITIGNORE
  ### README.md
  
  And finally, here is the home page that you want to open first:
- 
+
  ## INDEX.HTML
  HTML file that contains the major part of the form
 
