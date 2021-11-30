@@ -37,8 +37,11 @@
 
             function checkEmpty($con,$elem) {
                 global $errormessage;
-                if (isset($_POST[$elem]) && !empty($_POST[$elem])) {
-                    return mysqli_real_escape_string($con,$_POST[$elem]);
+                if (isset($_POST[$elem])) {
+                    $nospace = preg_replace('/\s+/', '', $_POST[$elem]);
+                    if (!empty($_POST[$elem]) && $nospace != "") {
+                        return mysqli_real_escape_string($con,$_POST[$elem]);
+                    }
                 } else {
                     $errormessage = true;
                     echo '<p><span style="color: #ff0000">',$elem,'</span> is a required field.</p>';
@@ -47,8 +50,11 @@
 
             function checkStrings($con,$elem) {
                 global $errormessage;
-                if (isset($_POST[$elem]) && !empty($_POST[$elem]) && preg_match("/^[a-zA-Z-' ]*$/",$_POST[$elem])) {
-                    return mysqli_real_escape_string($con,$_POST[$elem]);
+                if (isset($_POST[$elem])) {
+                    $nospace = preg_replace('/\s+/', '', $_POST[$elem]);
+                    if (!empty($_POST[$elem]) && preg_match("/^[a-zA-Z-' ]*$/",$_POST[$elem]) && $nospace != "") {
+                        return mysqli_real_escape_string($con,$_POST[$elem]);
+                    }
                 } else {
                     $errormessage = true;
                     echo '<p><span style="color: #ff0000">',$elem,'</span> was not filled correctly</p>';

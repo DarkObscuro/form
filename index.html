@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css" id="theme-link-css">
     <script src="js/phoneFields.js" type="text/javascript"></script>
-    <script src="js/checkField.js?version=2" type="text/javascript"></script>
-    <script src="js/checkForm.js?version=2" type="text/javascript"></script>
+    <script src="js/checkField.js?version=5" type="text/javascript"></script>
+    <script src="js/checkForm.js?version=7" type="text/javascript"></script>
   </head>
 
     <datalist id="countries">
@@ -285,13 +285,13 @@
                 <div class="inline-input-block">
                     <h3>First Name</h3>
                     <label id="iconfirstname" for="firstname"><i class="fas fa-user"></i></label>
-                    <input type="text" name="firstname" id="firstname" placeholder="First Name" onkeyup='checkNotEmptyRed(this.id);' required/>
+                    <input type="text" name="firstname" id="firstname" placeholder="First Name" onkeyup='checkString(this.id);' required/>
                 </div>
                 
                 <div class="inline-input-block">
                     <h3>Last Name</h3>
                     <label id="iconlastname" for="lastname"><i class="fas fa-user"></i></label>
-                    <input type="text" name="lastname" id="lastname" placeholder="Last Name" onkeyup='checkNotEmptyRed(this.id);' required/>     
+                    <input type="text" name="lastname" id="lastname" placeholder="Last Name" onkeyup='checkString(this.id);' required/>     
                 </div>
             </div>
             <br>
@@ -303,18 +303,18 @@
             <hr>
             <h3>Home Street Address</h3>
             <label id="iconstreetaddress" for="streetaddress"><i class="fas fa-globe"></i></label>
-            <input type="text" name="streetaddress" id="streetaddress" placeholder="Street Address" onkeyup='checkNotEmptyRed(this.id);' required/>
+            <input type="text" name="streetaddress" id="streetaddress" placeholder="Street Address" onkeyup='checkNotEmpty(this.id);' required/>
             <br><br>
 
             <h3>City</h3>
             <label id="iconcity" for="city"><i class="fas fa-globe"></i></label>
-            <input type="text" name="city" id="city" placeholder="City" onkeyup='checkNotEmptyRed(this.id);' autocomplete="off" required/>
+            <input type="text" name="city" id="city" placeholder="City" onkeyup='checkString(this.id);' autocomplete="off" required/>
 
             <hr>
 
             <h3>Citizenship</h3>
             <label id="iconcitizenship" for="citizenship"><i class="fas fa-globe"></i></label>
-            <input type="text" name="citizenship" id="citizenship" list="countries" placeholder="Citizenship" onkeyup='checkNotEmptyRed(this.id);' required>
+            <input type="text" name="citizenship" id="citizenship" list="countries" placeholder="Citizenship" onkeyup='checkNotEmpty(this.id);' required>
             <br><br>
             
             <h3>Date of Birth (mm/dd/yyyy)</h3>
@@ -334,17 +334,17 @@
             <hr>
             <h3>Employer</h3>
             <label id="iconemployer" for="employer"><i class="fas fa-user"></i></label>
-            <input type="text" name="employer" id="employer" placeholder="Employer" onkeyup='checkNotEmptyRed(this.id);' required>
+            <input type="text" name="employer" id="employer" placeholder="Employer" onkeyup='checkString(this.id);' required>
             <br><br>
 
             <h3>Job Title</h3>
             <label id="iconjobtitle" for="jobtitle"><i class="fas fa-user"></i></label>
-            <input type="text" name="jobtitle" id="jobtitle" placeholder="Job Title" onkeyup='checkNotEmptyRed(this.id);' required>
+            <input type="text" name="jobtitle" id="jobtitle" placeholder="Job Title" onkeyup='checkString(this.id);' required>
             <br><br>
 
             <h3>Division / Branch</h3>
             <label id="icondivision" for="division"><i class="fas fa-user"></i></label>
-            <input type="text" name="division" id="division" placeholder="Division / Branch" onkeyup='checkNotEmptyRed(this.id);' required>
+            <input type="text" name="division" id="division" placeholder="Division / Branch" onkeyup='checkString(this.id);' required>
             <br><br>
         </div> 
 

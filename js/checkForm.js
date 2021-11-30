@@ -1,14 +1,14 @@
 var checkFormFields1 = function() {
-    var first_name = document.getElementById('firstname'); 
-    var last_name = document.getElementById('lastname');
+    var firstnamecheck = ValidateString('firstname'); 
+    var lastnamecheck = ValidateString('lastname');
     var emailcheck = ValidateEmail();
-    var street_address = document.getElementById('streetaddress');
-    var city =  document.getElementById('city');
-    var citizenship = document.getElementById('citizenship');
+    var streetaddresscheck = ValidateNotEmpty('streetaddress');
+    var citycheck =  ValidateString('city');
+    var citizenshipcheck = ValidateNotEmpty('citizenship');
     var dob = document.getElementById('dob'); 
     var phonecheck = ValidatePhone();
     var comments = document.getElementById('comments');
-    var check = first_name.value && last_name.value && emailcheck && street_address.value && city.value && citizenship.value && dob.value && phonecheck;
+    var check = firstnamecheck && lastnamecheck && emailcheck && streetaddresscheck && citycheck && citizenshipcheck && dob.value && phonecheck;
     
     if (check) {
         comments.innerHTML = '';
@@ -19,11 +19,11 @@ var checkFormFields1 = function() {
 }
 
 var checkFormFields2 = function() {
-    var employer = document.getElementById('employer'); 
-    var job_title = document.getElementById('jobtitle');
-    var division = document.getElementById('division');
+    var employercheck = ValidateString('employer'); 
+    var jobtitlecheck = ValidateString('jobtitle');
+    var divisioncheck = ValidateString('division');
     var comments = document.getElementById('comments');
-    var check = employer.value && job_title.value && division.value;
+    var check = employercheck && jobtitlecheck && divisioncheck;
 
     if (check) {
         comments.innerHTML = '';
@@ -33,6 +33,8 @@ var checkFormFields2 = function() {
     return check;
 }
 
+/*********************************************************************************************************/
+
 function ValidateEmail() 
 {
     var elem = document.getElementById("email");
@@ -40,19 +42,50 @@ function ValidateEmail()
     return elem.value.match(mailformat);
 }
 
+var checkMail = function(id) {
+    checkSpecField(id,ValidateEmail());
+}
+
+/*********************************************************************************************************/
+
+function ValidateString(id)
+{
+    var elem = document.getElementById(id);
+    var stringformat = /^[a-zA-Z-' ]*$/;
+    var nospace = elem.value.replace(/ /g, "");
+    return elem.value.match(stringformat) && elem.value != "" && nospace != "";
+}
+
+var checkString = function(id) {
+    checkSpecField(id,ValidateString(id));
+}
+
+/*********************************************************************************************************/
+
+function ValidateNotEmpty(id)
+{
+    var elem = document.getElementById(id);
+    var nospace = elem.value.replace(/ /g, "");
+    return elem.value != "" && nospace != "";
+}
+
+var checkNotEmpty = function(id) {
+    checkSpecField(id,ValidateNotEmpty(id));
+}
+
+/*********************************************************************************************************/
+
 function ValidatePhone()
 {
     var elem = document.getElementById("mobilephone");
     return (elem.value.length == 16);
 }
 
-var checkMail = function(id) {
-    checkSpecField(id,ValidateEmail());
-}
-
 var checkPhone = function(id) {
     checkSpecField(id,ValidatePhone());
 }
+
+/*********************************************************************************************************/
 
 var checkSpecField = function(id,func) {
     const themeCSS = document.querySelector("#theme-link-css");
