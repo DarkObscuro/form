@@ -6,9 +6,9 @@ var checkFormFields1 = function() {
     var city =  document.getElementById('city');
     var citizenship = document.getElementById('citizenship');
     var dob = document.getElementById('dob'); 
-    var mobile_phone = document.getElementById('mobilephone');
+    var phonecheck = ValidatePhone();
     var comments = document.getElementById('comments');
-    var check = first_name.value && last_name.value && emailcheck && street_address.value && city.value && citizenship.value && dob.value && mobile_phone.value;
+    var check = first_name.value && last_name.value && emailcheck && street_address.value && city.value && citizenship.value && dob.value && phonecheck;
     
     if (check) {
         comments.innerHTML = '';
@@ -37,22 +37,30 @@ function ValidateEmail()
 {
     var elem = document.getElementById("email");
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    if (elem.value.match(mailformat))
-    {
-        return (true);
-    } else {
-        return (false);
-    }
+    return elem.value.match(mailformat);
+}
+
+function ValidatePhone()
+{
+    var elem = document.getElementById("mobilephone");
+    return (elem.value.length == 16);
 }
 
 var checkMail = function(id) {
+    checkSpecField(id,ValidateEmail());
+}
+
+var checkPhone = function(id) {
+    checkSpecField(id,ValidatePhone());
+}
+
+var checkSpecField = function(id,func) {
     const themeCSS = document.querySelector("#theme-link-css");
-    var emailcheck = ValidateEmail();
+    var check = func;
     var elem = document.getElementById(id);
     var labelicon = document.getElementById('icon' + id);
     if (themeCSS.getAttribute("href") == "css/style.css") {
-        // ... then switch it to "dark-theme.css"
-        if (emailcheck) {
+        if (check) {
             elem.style.border = '1px solid transparent';
             elem.style.boxShadow = '0 0 3px 0 blue';
             elem.style.background = '#fff';
@@ -65,10 +73,8 @@ var checkMail = function(id) {
             elem.style.color = 'red';
             labelicon.style.background = 'red';
         }
-    // Otherwise...
     } else {
-        // ... switch it to "light-theme.css"
-        if (emailcheck) {
+        if (check) {
             elem.style.border = '1px solid transparent';
             elem.style.boxShadow = '0 0 3px 0 #0077ff';
             elem.style.background = '#050032'

@@ -37,6 +37,19 @@
                     return mysqli_real_escape_string($con,"");
                 }
             }
+
+            function phoneNumber($con,$elem) {
+                if (isset($_POST[$elem]) && !empty($_POST[$elem])) {
+                    if ($_POST[$elem] == "(") {
+                        return mysqli_real_escape_string($con,"");
+                    } else {
+                        $res = preg_replace('/[^0-9.]+/', '', $_POST[$elem]);
+                        return mysqli_real_escape_string($con,$res);
+                    }
+                } else {
+                    return mysqli_real_escape_string($con,"");
+                }
+            }
             
             $stmt = $conn->prepare("INSERT INTO trainees (id,first_name,last_name,email,street_address,city,citizenship,dob,mobile_phone,employer,job_title,division,hear,conference,otherC,why,special) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
@@ -52,7 +65,7 @@
             $city = checkEmpty($conn,'city');
             $citizenship = checkEmpty($conn,'citizenship');
             $dob = checkEmpty($conn,'dob'); 
-            $mobile_phone = checkEmpty($conn,'mobilephone');
+            $mobile_phone = phoneNumber($conn,'mobilephone');
 
             // Page 2
             $employer = checkEmpty($conn,'employer'); 

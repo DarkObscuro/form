@@ -87,6 +87,8 @@ var checkAllFields = function() {
             checkNotEmptyBlue(id);
         } else if (id == "email") {
             checkMail(id);
+        } else if (id == "mobilephone") {
+            checkPhone(id);
         } else {
             checkNotEmptyRed(id);
         }
