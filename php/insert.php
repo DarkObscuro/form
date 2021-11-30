@@ -13,6 +13,7 @@
     <div class="main-block">
         <h2>Thank you</h2>
         <hr>
+        <br>
         <div>
 
             <?php 
@@ -25,21 +26,6 @@
                 die("ERROR: Could not connect. " 
                 . mysqli_connect_error()); 
             }
-            
-            function checkEmpty($con,$elem) {
-                if (isset($_POST[$elem]) && !empty($_POST[$elem])) {
-                    return mysqli_real_escape_string($con,$_POST[$elem]);
-                }
-            }
-
-            function checkStrings($con,$elem) {
-                global $errormessage;
-                if (isset($_POST[$elem]) && !empty($_POST[$elem]) && preg_match("/^[a-zA-Z-' ]*$/",$_POST[$elem])) {
-                    return mysqli_real_escape_string($con,$_POST[$elem]);
-                } else {
-                    $errormessage = true;
-                }
-            }
 
             function setEmpty($con,$elem) {
                 if (isset($_POST[$elem]) && !empty($_POST[$elem])) {
@@ -49,18 +35,59 @@
                 }
             }
 
+            function checkEmpty($con,$elem) {
+                global $errormessage;
+                if (isset($_POST[$elem]) && !empty($_POST[$elem])) {
+                    return mysqli_real_escape_string($con,$_POST[$elem]);
+                } else {
+                    $errormessage = true;
+                    echo '<p><span style="color: #ff0000">',$elem,'</span> is a required field.</p>';
+                }
+            }
+
+            function checkStrings($con,$elem) {
+                global $errormessage;
+                if (isset($_POST[$elem]) && !empty($_POST[$elem]) && preg_match("/^[a-zA-Z-' ]*$/",$_POST[$elem])) {
+                    return mysqli_real_escape_string($con,$_POST[$elem]);
+                } else {
+                    $errormessage = true;
+                    echo '<p><span style="color: #ff0000">',$elem,'</span> was not filled correctly</p>';
+                }
+            }
+
             function checkPhone($con,$elem) {
+                global $errormessage;
                 if (isset($_POST[$elem]) && !empty($_POST[$elem])) {
                     $res = preg_replace('/[^0-9.]+/', '', $_POST[$elem]);
                     if (strlen($res) == 10) {
                         return mysqli_real_escape_string($con,$res);
+                    } else {
+                        $errormessage = true;
                     }
+                } else {
+                    $errormessage = true;
+                    echo '<p><span style="color: #ff0000">Phone number</span> was not filled correctly</p>';
                 }
             }
             
             function checkEmail($con,$elem) {
+                global $errormessage;
                 if (isset($_POST[$elem]) && !empty($_POST[$elem]) && filter_var($_POST[$elem], FILTER_VALIDATE_EMAIL)) {
                     return mysqli_real_escape_string($con,$_POST[$elem]);
+                } else {
+                    $errormessage = true;
+                    echo '<p><span style="color: #ff0000">Email</span> was not filled correctly</p>';
+                }
+            }
+
+            function checkDOB($con,$elem,$format = 'Y-m-d') {
+                global $errormessage;
+                $d = DateTime::createFromFormat($format,$_POST[$elem]);
+                if($d && $d->format($format) === $_POST[$elem]) {
+                    return mysqli_real_escape_string($con,$_POST[$elem]);
+                } else {
+                    $errormessage = true;
+                    echo '<p><span style="color: #ff0000">Date of Birth</span> was not filled correctly</p>';
                 }
             }
 
@@ -76,8 +103,8 @@
             $email = checkEmail($conn,'email'); 
             $street_address = checkEmpty($conn,'streetaddress');
             $city = checkStrings($conn,'city');
-            $citizenship = checkStrings($conn,'citizenship');
-            $dob = checkEmpty($conn,'dob'); 
+            $citizenship = checkEmpty($conn,'citizenship');
+            $dob = checkDOB($conn,'dob'); 
             $mobile_phone = checkPhone($conn,'mobilephone');
 
             // Page 2
@@ -94,10 +121,10 @@
 
             $stmt->execute();
             if ($errormessage) {
-                echo "<p>Something went wrong/<p>";
-                echo "<p>Please use only Letters, spaces, dashes and apostrophes for text inputs.</p>";
+                echo '<br>';
                 echo "<p>Please try again</p>";
             } else {
+                echo '<br>';
                 echo "<h3>Your registration is complete.</h3>";
             }
 
@@ -107,7 +134,7 @@
 
             ?> 
         </div>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br>
         <hr>
         <div>
             <button type="button" onclick="window.location.href='../index.html'">Done</button>
