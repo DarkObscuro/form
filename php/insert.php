@@ -17,7 +17,9 @@
 
             <?php 
             
-            $conn = mysqli_connect("localhost", "root", "", "registration_details"); 
+            $conn = mysqli_connect("localhost", "root", "", "registration_details");
+            $errormessage = false;
+
             // Check connection 
             if($conn === false){ 
                 die("ERROR: Could not connect. " 
@@ -30,6 +32,15 @@
                 }
             }
 
+            function checkStrings($con,$elem) {
+                global $errormessage;
+                if (isset($_POST[$elem]) && !empty($_POST[$elem]) && preg_match("/^[a-zA-Z-' ]*$/",$_POST[$elem])) {
+                    return mysqli_real_escape_string($con,$_POST[$elem]);
+                } else {
+                    $errormessage = true;
+                }
+            }
+
             function setEmpty($con,$elem) {
                 if (isset($_POST[$elem]) && !empty($_POST[$elem])) {
                     return mysqli_real_escape_string($con,$_POST[$elem]);
@@ -38,19 +49,21 @@
                 }
             }
 
-            function phoneNumber($con,$elem) {
+            function checkPhone($con,$elem) {
                 if (isset($_POST[$elem]) && !empty($_POST[$elem])) {
-                    if ($_POST[$elem] == "(") {
-                        return mysqli_real_escape_string($con,"");
-                    } else {
-                        $res = preg_replace('/[^0-9.]+/', '', $_POST[$elem]);
+                    $res = preg_replace('/[^0-9.]+/', '', $_POST[$elem]);
+                    if (strlen($res) == 10) {
                         return mysqli_real_escape_string($con,$res);
                     }
-                } else {
-                    return mysqli_real_escape_string($con,"");
                 }
             }
             
+            function checkEmail($con,$elem) {
+                if (isset($_POST[$elem]) && !empty($_POST[$elem]) && filter_var($_POST[$elem], FILTER_VALIDATE_EMAIL)) {
+                    return mysqli_real_escape_string($con,$_POST[$elem]);
+                }
+            }
+
             $stmt = $conn->prepare("INSERT INTO trainees (id,first_name,last_name,email,street_address,city,citizenship,dob,mobile_phone,employer,job_title,division,hear,conference,otherC,why,special) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
             $stmt->bind_param("sssssssssssssssss",$id,$first_name,$last_name,$email,$street_address,$city,$citizenship,$dob,$mobile_phone,$employer,$job_title,$division,$hear,$conference,$otherC,$why,$special);
@@ -58,19 +71,19 @@
             // Taking all values from the form data
             $id = "";
             // Page 1
-            $first_name = checkEmpty($conn,'firstname'); 
-            $last_name = checkEmpty($conn,'lastname');
-            $email = checkEmpty($conn,'email'); 
+            $first_name = checkStrings($conn,'firstname'); 
+            $last_name = checkStrings($conn,'lastname');
+            $email = checkEmail($conn,'email'); 
             $street_address = checkEmpty($conn,'streetaddress');
-            $city = checkEmpty($conn,'city');
-            $citizenship = checkEmpty($conn,'citizenship');
+            $city = checkStrings($conn,'city');
+            $citizenship = checkStrings($conn,'citizenship');
             $dob = checkEmpty($conn,'dob'); 
-            $mobile_phone = phoneNumber($conn,'mobilephone');
+            $mobile_phone = checkPhone($conn,'mobilephone');
 
             // Page 2
-            $employer = checkEmpty($conn,'employer'); 
-            $job_title = checkEmpty($conn,'jobtitle');
-            $division = checkEmpty($conn,'division'); 
+            $employer = checkStrings($conn,'employer'); 
+            $job_title = checkStrings($conn,'jobtitle');
+            $division = checkStrings($conn,'division'); 
             
             // Page 3
             $hear = setEmpty($conn,'hear');
@@ -80,7 +93,13 @@
             $special = setEmpty($conn,'special');
 
             $stmt->execute();
-            echo "<h3>Your registration is complete.</h3>";
+            if ($errormessage) {
+                echo "<p>Something went wrong/<p>";
+                echo "<p>Please use only Letters, spaces, dashes and apostrophes for text inputs.</p>";
+                echo "<p>Please try again</p>";
+            } else {
+                echo "<h3>Your registration is complete.</h3>";
+            }
 
             // Close connection 
             $stmt->close();
