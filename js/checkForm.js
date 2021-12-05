@@ -5,10 +5,10 @@ var checkFormFields1 = function() {
     var streetaddresscheck = ValidateNotEmpty('streetaddress');
     var citycheck =  ValidateString('city');
     var citizenshipcheck = ValidateNotEmpty('citizenship');
-    var dob = document.getElementById('dob'); 
+    var dobcheck = ValidateDate(); 
     var phonecheck = ValidatePhone();
     var comments = document.getElementById('comments');
-    var check = firstnamecheck && lastnamecheck && emailcheck && streetaddresscheck && citycheck && citizenshipcheck && dob.value && phonecheck;
+    var check = firstnamecheck && lastnamecheck && emailcheck && streetaddresscheck && citycheck && citizenshipcheck && dobcheck && phonecheck;
     
     if (check) {
         comments.innerHTML = '';
@@ -71,6 +71,25 @@ function ValidateNotEmpty(id)
 
 var checkNotEmpty = function(id) {
     checkSpecField(id,ValidateNotEmpty(id));
+}
+
+/*********************************************************************************************************/
+
+function ValidateDate()
+{
+    var elem = document.getElementById("dob");
+
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+    today = yyyy + '-' + mm + '-' + dd;
+
+    return elem.value <= today && elem.value.length == 10;
+}
+
+var checkDate = function(id) {
+    checkSpecField(id,ValidateDate());
 }
 
 /*********************************************************************************************************/

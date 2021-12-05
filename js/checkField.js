@@ -93,6 +93,8 @@ var checkAllFields = function() {
             checkMail(id);
         } else if (id == "mobilephone") {
             checkPhone(id);
+        } else if (id == "dob") {
+            checkDate(id);
         } else {
             checkNotEmptyRed(id);
         }
