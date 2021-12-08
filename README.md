@@ -1,4 +1,4 @@
-# CISO Registration form
+# Registration form
 Form that will be used as a template for a basic registration system, that sends data to a local server.
 The destination database can be changed according to the need.
 
