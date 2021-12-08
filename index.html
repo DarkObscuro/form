@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css" id="theme-link-css">
     <script src="js/phoneFields.js" type="text/javascript"></script>
-    <script src="js/checkField.js?version=11" type="text/javascript"></script>
-    <script src="js/checkForm.js?version=30" type="text/javascript"></script>
+    <script src="js/checkField.js?version=12" type="text/javascript"></script>
+    <script src="js/checkForm.js?version=31" type="text/javascript"></script>
   </head>
 
     <datalist id="countries">
@@ -413,11 +413,12 @@
     
     <!------------------------------------------------------- Javascript ------------------------------------------------------->
     <script>
-        var currentTab = 0; // Current tab is set to be the first tab (0)
-        showTab(currentTab); // Display the current tab
+        var currentTab = 0;
+        showTab(currentTab);
         
 
         var checkFormFilled = function(n) {
+            // Form validation switch
             if (n == 0) {
                 return checkFormFields1(n);
             } else if (n == 1) {
@@ -428,10 +429,9 @@
         }
 
         function showTab(n) {
-            // This function will display the specified tab of the form ...
+            // Displays current tab
             var x = document.getElementsByClassName("tab");
             x[n].style.display = "block";
-            // ... and fix the Previous/Next buttons:
             if (n == 0) {
                 document.getElementById("prevBtn").style.display = "none";
             } else {
@@ -442,50 +442,42 @@
             } else {
                 document.getElementById("nextBtn").innerHTML = "Next";
             }
-            // ... and run a function that displays the correct step indicator:
             fixStepIndicator(n);
         }
 
         function nextPrev(n) {
-            // This function will figure out which tab to display
+            // Allowing tab navigation
             var x = document.getElementsByClassName("tab");
-            // Exit the function is any field in the current tab is invalid
             if (n==1 && !validateForm()) return false;
-            // Hide the current tab:
             x[currentTab].style.display = "none";
-            // Increase or decrease the current tab by 1:
             currentTab = currentTab + n;
-            // if you have reached the end of the form... :
             if (currentTab >= x.length) {
-                //...the form gets submitted:
                 document.getElementById("regForm").submit();
                 return false;
             }
-            // Otherwise, display the correct tab:
             showTab(currentTab);
         }
         
         function validateForm() {
-            // This function deals with validation of the form fields
-            // If the valid status is true, mark the step as finished and valid:
+            // Verifies that all fields of the current tab are valid
             res = checkFormFilled(currentTab);
             if (res) {
                 document.getElementsByClassName("step")[currentTab].className += " finish";
             }
-            return res; // return the valid status
+            return res;
         }
 
         function fixStepIndicator(n) {
-            // This function removes the "active" class of all steps...
+            // Footer step display
             var i, x = document.getElementsByClassName("step");
             for (i = 0; i < x.length; i++) {
                 x[i].className = x[i].className.replace(" active", "");
             }
-            //... and adds the "active" class to the current step:
             x[n].className += " active";
         }
 
         function checkHear() {
+            // Display the corresponing extra input depending on the Feedback value
             if (document.getElementById('hear').value == 'conf') {
                 document.getElementById('conference').type = "text";
                 document.getElementById('iconconference').style = "";
@@ -513,21 +505,14 @@
             }
         }
 
-        // Select the button
+        // Theme selector
         const btn = document.querySelector(".btn-toggle");
-        // Select the stylesheet <link>
         const themeCSS = document.querySelector("#theme-link-css");
 
-        // Listen for a click on the button
         btn.addEventListener("click", function() {
-        // If the current URL contains "ligh-theme.css"
         if (themeCSS.getAttribute("href") == "css/style.css") {
-            // ... then switch it to "dark-theme.css"
             themeCSS.href = "css/darkstyle.css";
-
-        // Otherwise...
         } else {
-            // ... switch it to "light-theme.css"
             themeCSS.href = "css/style.css";
         }
         checkAllFields();

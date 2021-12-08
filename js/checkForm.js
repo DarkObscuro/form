@@ -1,3 +1,5 @@
+/********************************************* Fields Check ************************************************************/
+
 var checkFormFields1 = function() {
     var firstnamecheck = ValidateString('firstname'); 
     var lastnamecheck = ValidateString('lastname');
@@ -33,7 +35,7 @@ var checkFormFields2 = function() {
     return check;
 }
 
-/*********************************************************************************************************/
+/********************************************* Mail Validation ************************************************************/
 
 function ValidateEmail() 
 {
@@ -46,7 +48,7 @@ var checkMail = function(id) {
     checkSpecField(id,ValidateEmail());
 }
 
-/*********************************************************************************************************/
+/********************************************* String Validation ************************************************************/
 
 function ValidateString(id)
 {
@@ -60,7 +62,7 @@ var checkString = function(id) {
     checkSpecField(id,ValidateString(id));
 }
 
-/*********************************************************************************************************/
+/********************************************* Text Validation ************************************************************/
 
 function ValidateNotEmpty(id)
 {
@@ -73,7 +75,7 @@ var checkNotEmpty = function(id) {
     checkSpecField(id,ValidateNotEmpty(id));
 }
 
-/*********************************************************************************************************/
+/********************************************* Birth Date Validation ************************************************************/
 
 function ValidateDate()
 {
@@ -92,7 +94,7 @@ var checkDate = function(id) {
     checkSpecField(id,ValidateDate());
 }
 
-/*********************************************************************************************************/
+/********************************************* Phone Number Validation ************************************************************/
 
 function ValidatePhone()
 {
@@ -104,7 +106,7 @@ var checkPhone = function(id) {
     checkSpecField(id,ValidatePhone());
 }
 
-/*********************************************************************************************************/
+/********************************************* Validation Theme Switch ************************************************************/
 
 var checkSpecField = function(id,func) {
     const themeCSS = document.querySelector("#theme-link-css");
