@@ -106,6 +106,14 @@ var checkPhone = function(id) {
 
 /*********************************************************************************************************/
 
+var changeStyle = function(elem, labelicon, background, color) {
+    elem.style.border = '1px solid transparent';
+    elem.style.boxShadow = '0 0 3px 0 ' + color;
+    elem.style.background = background;
+    elem.style.color = color;
+    labelicon.style.background = color;
+}
+
 var checkSpecField = function(id,func) {
     const themeCSS = document.querySelector("#theme-link-css");
     var check = func;
@@ -113,31 +121,15 @@ var checkSpecField = function(id,func) {
     var labelicon = document.getElementById('icon' + id);
     if (themeCSS.getAttribute("href") == "css/style.css") {
         if (check) {
-            elem.style.border = '1px solid transparent';
-            elem.style.boxShadow = '0 0 3px 0 blue';
-            elem.style.background = '#fff';
-            elem.style.color = 'blue';
-            labelicon.style.background = 'blue';
+            changeStyle(elem,labelicon,'#fff','blue');
         } else {
-            elem.style.border = '1px solid transparent';
-            elem.style.boxShadow = '0 0 3px 0 red';
-            elem.style.background = '#fff';
-            elem.style.color = 'red';
-            labelicon.style.background = 'red';
+            changeStyle(elem,labelicon,'#fff','red');
         }
     } else {
         if (check) {
-            elem.style.border = '1px solid transparent';
-            elem.style.boxShadow = '0 0 3px 0 #0077ff';
-            elem.style.background = '#050032'
-            elem.style.color = '#0077ff';
-            labelicon.style.background = '#0077ff';
+            changeStyle(elem,labelicon,'#050032','#0077ff');
         } else {
-            elem.style.border = '1px solid transparent';
-            elem.style.boxShadow = '0 0 3px 0 red';
-            elem.style.background = '#320000';
-            elem.style.color = 'red';
-            labelicon.style.background = 'red';
+            changeStyle(elem,labelicon,'#320000','red');
         }
     }
 }
