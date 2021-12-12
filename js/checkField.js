@@ -1,3 +1,5 @@
+/********************************************* Light Theme ************************************************************/
+
 var checkNotEmptyBlueLight = function(id) {
     var elem = document.getElementById(id);
     if (elem.value) {
@@ -24,6 +26,8 @@ var checkNotEmptyRedLight = function(id) {
         labelicon.style.background = 'red';
     }
 }
+
+/********************************************* Dark Theme ************************************************************/
 
 var checkNotEmptyBlueDark = function(id) {
     var elem = document.getElementById(id);
@@ -52,32 +56,29 @@ var checkNotEmptyRedDark = function(id) {
     }
 }
 
+/********************************************* Blue Switch ************************************************************/
 
 var checkNotEmptyBlue = function(id) {
     const themeCSS = document.querySelector("#theme-link-css");;
     if (themeCSS.getAttribute("href") == "css/style.css") {
-        // ... then switch it to "dark-theme.css"
         checkNotEmptyBlueLight(id);
-
-    // Otherwise...
     } else {
-        // ... switch it to "light-theme.css"
         checkNotEmptyBlueDark(id);
     }
 }
 
+/********************************************* Red Switch ************************************************************/
+
 var checkNotEmptyRed = function(id) {
     const themeCSS = document.querySelector("#theme-link-css");;
     if (themeCSS.getAttribute("href") == "css/style.css") {
-        // ... then switch it to "dark-theme.css"
         checkNotEmptyRedLight(id);
-
-    // Otherwise...
     } else {
-        // ... switch it to "light-theme.css"
         checkNotEmptyRedDark(id);
     }
 }
+
+/********************************************* All Fields ************************************************************/
 
 var checkAllFields = function() {
     var fields = document.getElementsByTagName("input");

@@ -1,4 +1,4 @@
-# CISO Registration form
+# Registration form
 Form that will be used as a template for a basic registration system, that sends data to a local server.
 The destination database can be changed according to the need.
 
@@ -13,7 +13,7 @@ Folder that contains 2 style sheets:
 Folder that contains the extra fonts used in this form
 
 ## IMAGE
-Folder that contains the icon and some extra images
+Folder that contains the favicon
 
 ## JS
 Folder that contains all the JavaScript files of the project. There are three at the moment:

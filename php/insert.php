@@ -140,7 +140,6 @@
 
             ?> 
         </div>
-        <br><br><br><br><br><br>
         <hr>
         <div>
             <button type="button" onclick="window.location.href='../index.html'">Done</button>
