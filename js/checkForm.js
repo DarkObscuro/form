@@ -116,9 +116,9 @@ const changeStyle = function(elem, labelicon, background, color) {
     labelicon.style.background = color;
 }
 
-const changeNRStyle = function(elem, color) {
-    elem.style.border = '1px solid transparent';
-    elem.style.boxShadow = '0 0 3px 0 ' + color;
+const changeNRStyle = function(elem, boxShadow, borderColor) {
+    elem.style.border = '1px solid ' + borderColor;
+    elem.style.boxShadow = boxShadow;
 }
 
 const checkSpecField = function(id, func) {
