@@ -108,7 +108,7 @@ var checkPhone = function(id) {
 
 /********************************************* Validation Theme Switch ************************************************************/
 
-var changeStyle = function(elem, labelicon, background, color) {
+const changeStyle = function(elem, labelicon, background, color) {
     elem.style.border = '1px solid transparent';
     elem.style.boxShadow = '0 0 3px 0 ' + color;
     elem.style.background = background;
@@ -116,22 +116,19 @@ var changeStyle = function(elem, labelicon, background, color) {
     labelicon.style.background = color;
 }
 
-var checkSpecField = function(id,func) {
-    const themeCSS = document.querySelector("#theme-link-css");
-    var check = func;
-    var elem = document.getElementById(id);
-    var labelicon = document.getElementById('icon' + id);
-    if (themeCSS.getAttribute("href") == "css/style.css") {
-        if (check) {
-            changeStyle(elem,labelicon,'#fff','blue');
-        } else {
-            changeStyle(elem,labelicon,'#fff','red');
-        }
-    } else {
-        if (check) {
-            changeStyle(elem,labelicon,'#050032','#0077ff');
-        } else {
-            changeStyle(elem,labelicon,'#320000','red');
-        }
-    }
+const changeNRStyle = function(elem, color) {
+    elem.style.border = '1px solid transparent';
+    elem.style.boxShadow = '0 0 3px 0 ' + color;
 }
+
+const checkSpecField = function(id, func) {
+    const themeCSS = document.querySelector("#theme-link-css");
+    const check = func;
+    const elem = document.getElementById(id);
+    const labelicon = document.getElementById('icon' + id);
+    if (themeCSS.getAttribute("href") === "css/style.css") {
+        changeStyle(elem, labelicon, '#fff', check ? 'blue' : 'red');
+    } else {
+        changeStyle(elem, labelicon, check ? '#050032' : '#320000', check ? '#0077ff' : 'red');
+    }
+};

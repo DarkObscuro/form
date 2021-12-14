@@ -11,20 +11,10 @@ var checkNotEmptyBlueLight = function(id) {
     }
 }
 
-var checkNotEmptyRedLight = function(id) {
-    var elem = document.getElementById(id);
-    var labelicon = document.getElementById('icon' + id);
-    if (elem.value) {
-        elem.style.border = '1px solid transparent';
-        elem.style.boxShadow = '0 0 3px 0 blue';
-        elem.style.background = '#fff';
-        labelicon.style.background = 'blue';
-    } else {
-        elem.style.border = '1px solid transparent';
-        elem.style.boxShadow = '0 0 3px 0 red';
-        elem.style.background = '#fff';
-        labelicon.style.background = 'red';
-    }
+const checkNotEmptyRedLight = function(id) {
+    const elem = document.getElementById(id);
+    const labelicon = document.getElementById('icon' + id);
+    changeStyle(elem, labelicon, elem.value ? '#fff' : '#fff', elem.value ? 'blue' : 'red');
 }
 
 /********************************************* Dark Theme ************************************************************/
@@ -40,20 +30,10 @@ var checkNotEmptyBlueDark = function(id) {
     }
 }
 
-var checkNotEmptyRedDark = function(id) {
-    var elem = document.getElementById(id);
-    var labelicon = document.getElementById('icon' + id);
-    if (elem.value) {
-        elem.style.border = '1px solid transparent';
-        elem.style.boxShadow = '0 0 3px 0 #0077ff';
-        elem.style.background = '#050032'
-        labelicon.style.background = '#0077ff';
-    } else {
-        elem.style.border = '1px solid transparent';
-        elem.style.boxShadow = '0 0 3px 0 red';
-        elem.style.background = '#320000';
-        labelicon.style.background = 'red';
-    }
+const checkNotEmptyRedDark = function(id) {
+    const elem = document.getElementById(id);
+    const labelicon = document.getElementById('icon' + id);
+    changeStyle(elem, labelicon, elem.value ? '#050032' : '#320000', elem.value ? '#0077ff' : 'red');
 }
 
 /********************************************* Blue Switch ************************************************************/
