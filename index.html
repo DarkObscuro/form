@@ -413,11 +413,10 @@
     
     <!------------------------------------------------------- Javascript ------------------------------------------------------->
     <script>
-        var currentTab = 0;
+        const currentTab = 0;
         showTab(currentTab);
-        
 
-        var checkFormFilled = function(n) {
+        const checkFormFilled = function(n) {
             // Form validation switch
             if (n == 0) {
                 return checkFormFields1(n);
@@ -430,7 +429,7 @@
 
         function showTab(n) {
             // Displays current tab
-            var x = document.getElementsByClassName("tab");
+            const x = document.getElementsByClassName("tab");
             x[n].style.display = "block";
             if (n == 0) {
                 document.getElementById("prevBtn").style.display = "none";
@@ -447,7 +446,7 @@
 
         function nextPrev(n) {
             // Allowing tab navigation
-            var x = document.getElementsByClassName("tab");
+            const x = document.getElementsByClassName("tab");
             if (n==1 && !validateForm()) return false;
             x[currentTab].style.display = "none";
             currentTab = currentTab + n;
@@ -460,7 +459,7 @@
         
         function validateForm() {
             // Verifies that all fields of the current tab are valid
-            res = checkFormFilled(currentTab);
+            const res = checkFormFilled(currentTab);
             if (res) {
                 document.getElementsByClassName("step")[currentTab].className += " finish";
             }
@@ -476,32 +475,29 @@
             x[n].className += " active";
         }
 
+        function changeDisplay(conf, iconf, otherC, iotherC, h3other1, h3other2, h3other3) {
+            document.getElementById('conference').type = conf;
+            document.getElementById('iconconference').style = iconf;
+            document.getElementById('otherC').type = otherC;
+            document.getElementById('iconotherC').style = iotherC;
+            document.getElementById('h3other').style = h3other1;
+            document.getElementById('h3other2').style = h3other2;
+            document.getElementById('h3other3').style = h3other3;
+        }
+
         function checkHear() {
             // Display the corresponing extra input depending on the Feedback value
-            if (document.getElementById('hear').value == 'conf') {
-                document.getElementById('conference').type = "text";
-                document.getElementById('iconconference').style = "";
-                document.getElementById('otherC').type = "hidden";
-                document.getElementById('iconotherC').style = "display: none;";
-                document.getElementById('h3other').style = "display: none;";
-                document.getElementById('h3other2').style = "display: none;";
-                document.getElementById('h3other3').style = "display: none;";
-            } else if (document.getElementById('hear').value == 'other'){
-                document.getElementById('otherC').type = "text";
-                document.getElementById('iconotherC').style = "";
-                document.getElementById('h3other').style = "";
-                document.getElementById('h3other2').style = "";
-                document.getElementById('h3other3').style = "";
-                document.getElementById('conference').type = "hidden";
-                document.getElementById('iconconference').style = "display: none;";
-            } else {
-                document.getElementById('conference').type = "hidden";
-                document.getElementById('iconconference').style = "display: none;";
-                document.getElementById('otherC').type = "hidden";
-                document.getElementById('iconotherC').style = "display: none;";
-                document.getElementById('h3other').style = "display: none;";
-                document.getElementById('h3other2').style = "display: none;";
-                document.getElementById('h3other3').style = "display: none;";
+            const hear = document.getElementById('hear').value;
+            switch (hear) {
+            case 'conf':
+                changeDisplay("text","","hidden","display: none;","display: none;","display: none;","display: none;");
+                break;
+            case 'other':
+                changeDisplay("hidden","display: none;","text","","","","");
+                break;
+            default:
+                changeDisplay("hidden","display: none;","hidden","display: none;","display: none;","display: none;","display: none;");
+                break;
             }
         }
 
